@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title> Feedback : Crowdcc • Copy tweets • Store tweets </title>
+
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta property="og:type" 		content="website"/>
+<meta property="og:site_name" 	content="crowdcc"/>
+<meta property="og:image" 		content="/img/icons/app-200x200.png"/>
+<meta property="og:title" 		content="crowdcc: copy, read everything"/>
+<meta property="og:description" content="manage your social content, read everything, at once in one place, store, read later."/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@crowdcchq">
+<meta name="twitter:title" content="crowdcc: copy, read everything">
+<meta name="twitter:description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="twitter:image" content="/img/twitter-card.png"/>
+<meta property="twitter:account_id" content="2798099239" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >
+
+<link href="css/plantical.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/fonticonweb.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/calendar.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/plans.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+</head>
+<body spellcheck="false">
+
+<!--
+<div id="topbar" class="topbar" style="z-index:4;">
+<div id="banners" class="js-banners"> </div>
+ 
+<div class="global-nav">
+<div class="container">
+<div class="ccc-spinner"></div>
+<div role="navigation" style="display: inline-block">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+<div id="sign" style="display:block;">
+<div class="signon account" data-global-action="account" style="display: block;">
+<span class="signon icon icon-user icon--large icon-nib-right"></span>
+<div id="top-loader" style="display: none;">
+<img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" />
+</div>
+<span id="signon" class="signon textin">back</span>
+</div>
+<div id="sigfrm" class="sigfrm" style="height:104px; display:none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display:none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr"> 
+<a class="signin-tweet account-summary"> 
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image"><div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div></div>
+<div class="signin-tweet withtt">with twitter</div>
+</div></div></div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr"> 
+<a class="signin-menu account-summary"> 
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image"><div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div></div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div></div></div>
+</a>
+</li><li></li></ul>
+</nav></div></div></div> 
+</li></ul></div>
+
+<div class="ccc-icon-topbar" style="margin-right:-51px;">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">  
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #1B3662"></div>
+</div></div></div>
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions" class="nav js-global-actions">
+<li class="create" data-global-action="create">
+<span class="create icon icon-quill icon--large icon-nibble-right"></span>
+<span class="create text">create</span>
+</li>
+<li id="global-nav-home" class="home active" data-global-action="home">
+</li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+<span alt="timeline">
+<span class="instore icon icon-left icon-play_left icon--large"></span>
+</span>
+<span alt="carbon">
+<span class="ccstore icon icon-right icon-play_right icon--large"></span>
+</span>
+</li></ul>
+</div></div></div></div>
+
+</div>
+
+<div class="ui-dialog-position">
+<div class="ui-dialog ui-dialog-center" tabindex="-1" role="dialog" aria-describedby="modal-email" aria-labelledby="ui-id-1">
+
+<div class="ui-dialog-titlebar">
+<span id="ui-id-1" class="ui-dialog-title"> </span>
+<button class="ui-dialog-titlebar-close ui-button" aria-disabled="false" role="button">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+</div></div></div>
+
+<div class="notices notices-center" style="position: fixed; margin-top:5px; z-index: 101; display:block">
+<ul class="notices clearfix">
+
+<li id="error_icu" class="alert error_icc">
+<span>
+<span id="error_icu_msg" class="message">crowdcc may be running in another browser window, please refresh or close this window.</span>
+</span>
+</li>
+
+<li id="hacked_icu" class="alert hacked_icc">
+<span>
+<span id="hacked_icu_msg" class="message">crowdcc: your feedback</span>
+</span>
+</li>
+</ul>
+
+<div class="noticebar-close">
+<button class="ui-hacked-noticebar-close" aria-disabled="false" role="button">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+-->
+
+</div>
+
+<div class="pad-dwn"></div>
+
+<div class="ccmid" style="display:none;">
+<object width="100%" height="100%" type="image/svg+xml" class="ccsvg" data="img/svg/ccc_logo_wht_32x32.svg"> </object>
+</div>
+
+
+<div id="feedback_submit_form" style="display:block;">
+
+ <section class="sect video splash">
+ <div class="container_hack">
+
+ <form class="form-horizontal help-form">
+ <h2><div class="head_pad lato_black">We want to build crowdcc the way you want</div></h2> 
+ <input id="authenticity_token" name="authenticity_token" type="hidden" value="ultD5FGzuit3sK4IfugwtGEfPjIdx4S6mWZYyBGplnw=" />
+ <div id="content"><p>
+
+ We created this web app to help collect and curate our social media on twitter. &nbsp;We wanted to be able to quickly scan and copy
+ interesting tweets without having to navigate back forth through our twitter timeline looking for related topics.<p>
+ 
+ We think that other people might find this app useful too.<p>
+
+ We are now pondering about other features we could offer users (those using the app for their own use and those who might like to use it as part of a business).<p>   
+
+ We've already started thinking about the sorts of things you might like and we're keen to have your feedback on those ideas.<p>
+
+ We'd also love to hear your suggestions (in the comments section below) for features and enhancements which we haven't thought of (no matter how big or small, from the simple to the more complex).<p>
+  
+ Here are some new feature options we are thinking about offering;<p>
+
+ Please select <span class="plan_bold"> A most important</span>, or <span class="plan_bold"> B no opinion</span>, or <span class="plan_bold"> C least important</span>.<p>
+ </div>
+ <div id="red" style="display:block;">
+ <div class="locked-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content">Store up to 100cc?</div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <label class="radio">
+ <input id="aa" class="radio-selection-validate" type="radio" value="1" name="a"> <span class="plan_bold">A</span>
+ </label>
+ <label class="radio">
+ <input id="ab" class="radio-selection-validate" type="radio" value="2" name="a" checked="checked"> <span class="plan_bold">B</span>
+ </label>
+ <label class="radio">
+ <input id="ac" class="radio-selection-validate" type="radio" value="3" name="a" > <span class="plan_bold">C</span>
+ </label>         
+ <div id="account_msg" class="account_msg">&nbsp;</div>
+ </div>
+ </div>
+ </div>        
+ <div class="locked-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content">Auto copy all or certain tweets in your timeline?</div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <label class="radio">
+ <input id="ba" class="radio-selection-validate" type="radio" value="1" name="b" > <span class="plan_bold">A</span>
+ </label>
+ <label class="radio">
+ <input id="bb" class="radio-selection-validate" type="radio" value="2" name="b" checked="checked"> <span class="plan_bold">B</span>
+ </label>
+ <label class="radio">
+ <input id="bc" class="radio-selection-validate" type="radio" value="3" name="b" > <span class="plan_bold">C</span>
+ </label>         
+ <div id="account_msg" class="account_msg">&nbsp;</div>
+ </div>
+ </div>
+ </div>
+ <div class="locked-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content">Re-post selected copied tweets at a future date?</div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <label class="radio">
+ <input id="ca" class="radio-selection-validate" type="radio" value="1" name="c" > <span class="plan_bold">A</span>
+ </label>
+ <label class="radio">
+ <input id="cb" class="radio-selection-validate" type="radio" value="2" name="c" checked="checked"> <span class="plan_bold">B</span>
+ </label>
+ <label class="radio">
+ <input id="cc" class="radio-selection-validate" type="radio" value="3" name="c" > <span class="plan_bold">C</span>
+ </label>
+ <div id="account_msg" class="account_msg">&nbsp;</div>
+ </div>
+ </div>
+ </div>
+ <div class="locked-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content">Auto copy tweets option from selected users?</div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <label class="radio">
+ <input id="da" class="radio-selection-validate" type="radio" value="1" name="d" > <span class="plan_bold">A</span>
+ </label>
+ <label class="radio">
+ <input id="db" class="radio-selection-validate" type="radio" value="2" name="d" checked="checked"> <span class="plan_bold">B</span>
+ </label>
+ <label class="radio">
+ <input id="dc" class="radio-selection-validate" type="radio" value="3" name="d" > <span class="plan_bold">C</span>
+ </label>         
+ <div id="account_msg" class="account_msg">&nbsp;</div>
+ </div>
+ </div>
+ </div>
+ <div class="locked-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content">Email you auto copied tweets from selected users?</div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <label class="radio">
+ <input id="ea" class="radio-selection-validate" type="radio" value="1" name="e" > <span class="plan_bold">A</span>
+ </label>
+ <label class="radio">
+ <input id="eb" class="radio-selection-validate" type="radio" value="2" name="e" checked="checked"> <span class="plan_bold">B</span>
+ </label>
+ <label class="radio">
+ <input id="ec" class="radio-selection-validate" type="radio" value="3" name="e" > <span class="plan_bold">C</span>
+ </label>         
+ <div id="account_msg" class="account_msg">&nbsp;</div>
+ </div>
+ </div>
+ </div>
+ <div class="cmail-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content left_pad">
+ <div class="plan_bold">twitter username @</div>           
+ </div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <input id="user" class="input-medium screen-name-validate serialize-me required-validate" type="text" maxlength="20">
+ <div id="user_msg" class="user_msg">&nbsp;</div>
+ <span class="help-block"><p>this is the twitter account we'll use to contact you enter your twitter account.</span>
+ <span class="help-inline error-template screen-name-validate-error" style="display: none;"> Only use letters, numbers and '_'. </span>
+ </div>
+ </div>
+ </div>
+ <div class="cmail-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content left_pad">
+ <div class="plan_bold">your current email</div>
+ </div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">            
+ <input id="cmail" type="text" autocomplete="on" name="cmail">
+ <div id="cmail_msg" class="cmail_msg">&nbsp;</div>
+ <span class="help-block"><p>this is the email we'll use to confirm your feedback has been received.</span>
+ </div>
+ </div>     
+ </div>
+ <div class="cmail-ok feedback_hack group">
+ <div class="col span_1_of_2">
+ <div class="left_content left_pad">
+ <div class="plan_bold">features you would like</div>
+ </div>
+ </div>
+ <div class="col span_1_of_2">
+ <div class="right_content">
+ <textarea id="comments" name="comments" cols="40" rows="5"  placeholder="please add a comment ..." ></textarea>
+ <div id="comments_msg" class="user_msg">&nbsp;</div>
+ <span class="help-block"><p>thank you in advance for your feedback.</span>
+ </div>
+ </div>     
+ </div>
+ </div>
+ <div class="cmail-er section_hack group">
+ <div id="cc_btn_submit" class="cc_btn_unable">
+ <div id="submit_feedback" class="cc_btn_feedback">Submit</div>
+ </div>
+ </form>
+ </section>
+
+ <p class="ccform_footer align_center">
+ <a href="../terms/privacy" target="_blank">Privacy Policy</a>
+ </p>
+ <p class="feedback_usr_pad"> </p>
+
+</div>
+
+
+<div id="feedback_success_form" style="display:none;">
+
+ <section class="sect video splash">
+ <div class="container_hack">
+
+ <form class="form-horizontal help-form">
+ <h2><div class="head_pad lato_black">Thank you for your feedback</div></h2>
+ <div id="content">
+ <p class="sml_middle">We read every feedback message, comment, tweet and email, it helps us build a better crowdcc experience ...<p>
+ </div>
+ <div class="cmail-er section_hack group">
+ <div id="cc_btn_success" class="cc_btn_enable">
+ <div id="success_feedback" class="cc_btn_feedback">Visit our blog</div>
+ </div>
+ </form>
+ </section>
+
+ <p class="ccform_footer align_center">
+ <a href="../terms/privacy" target="_blank">Privacy Policy</a>
+ </p>
+ <p class="feedback_usr_pad"> </p>
+
+</div>
+
+
+<div id="feedback_error_form" style="display:none;">
+
+ <section class="sect video splash">
+ <div class="container_hack">	
+
+ <form class="form-horizontal help-form">
+ <h2><div class="head_pad lato_black">Woaw, something has gone wobbly</div></h2>
+ <div id="content">
+ <p class="sml_middle">We have didn't get that feedback!<p>
+ </div>
+ <div class="cmail-er section_hack group">
+ <div id="cc_btn_error" class="cc_btn_enable">
+ <div id="error_feedback" class="cc_btn_feedback">Try again</div>
+ </div>
+ </form>
+ </section>
+
+ <p class="ccform_footer align_center">
+ <a href="../terms/privacy" target="_blank">Privacy Policy</a>
+ </p>
+ <p class="feedback_usr_pad"> </p>
+
+</div>
+
+
+
+<!-- default * style * start page view -->
+
+<style>
+
+body{background-image:url(/img/landing_bg_2000x1415.jpg);min-height:0;padding-bottom:0;background-repeat:no-repeat;background-size:cover}.create,.create:hover,.icon-play_left,.icon-play_left:hover,.icon-play_right,.icon-play_right:hover{color:#DFDFDF!important}
+
+</style>
+
+<!-- id="su" support * help * end page view -->
+<div id="su" style="display: none; margin-top:0px;">
+
+<style type="text/css">
+
+
+#su .show_on_mobile,.print_only,.print_only_inline{display:none}.container,.position-relative{position:relative}.container{margin:0 auto;width:960px}#su .section.video.splash #video_form{padding:2rem 1.5rem}.helvetica{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.lato,.lato_black,.lato_bold,.lato_regular{font-family:Lato,sans-serif}.lato{font-weight:400}.lato_black{font-weight:900}.lato_bold{font-weight:700}.lato_regular{font-weight:500}.monospace{font-family:Monaco,Menlo,Consolas,"Courier New",monospace!important}.float-left{float:left!important}.float-right{float:right!important}.clear-left{clear:left}.clear-right{clear:right}.clear-both{clear:both}.position-absolute{position:absolute}.block{display:block!important}.inline-block{display:inline-block!important}.inline{display:inline!important}.align-left{text-align:left!important}.align-center{text-align:center!important}.align-right{text-align:right!important}.align_top{vertical-align:top!important}.align_middle{vertical-align:middle!important}.align_bottom{vertical-align:bottom!important}#content{align-text:center;width:90%;margin:0 auto 30px}.radio{margin-right:30.5px}.grey-disable,.grey-disable:hover{color:grey}
+
+
+</style>
+
+<script type="text/javascript" src="js/ccc.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="js/feedback.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="js/rsa_x.js"></script>
+
+</html>

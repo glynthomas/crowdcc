@@ -1,0 +1,22 @@
+js.change.log : last update : 11th Nov 2015
+
+file : store.min.css
+
+why  : parent class will not override child class in chrome and safari
+
+line : 5119 
+
+old  :
+
+    case (tagclass === 'ui-dialog-noticebar-close'):
+          message_('message_close', '');
+          _click('reset');
+    break;
+
+new  :
+
+    case (tagclass === 'ui-button-text'):
+    case (tagclass === 'ui-dialog-noticebar-close'):
+          message_('message_close', '');
+          _click('reset');
+    break;

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>accounts: crowdcc</title>
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta property="og:type" 		content="website"/>
+<meta property="og:site_name" 	content="crowdcc"/>
+<meta property="og:image" 		content="/img/icons/app-200x200.png"/>
+<meta property="og:title" 		content="crowdcc: copy, read everything"/>
+<meta property="og:description" content="manage your social content, read everything, at once in one place, store, read later."/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@crowdcchq">
+<meta name="twitter:title" content="crowdcc: copy, read everything">
+<meta name="twitter:description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="twitter:image" content="/img/twitter-card.png"/>
+<meta property="twitter:account_id" content="2798099239" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >
+
+<link href="css/plantical.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/fonticonweb.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/calendar.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/plans.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+</head>
+<body spellcheck="false">
+
+<div id="topbar" class="topbar" style="z-index:4;">
+<div id="banners" class="js-banners"> </div>  
+<div class="global-nav">
+<div class="container">
+<div class="ccc-spinner"></div>
+<div role="navigation" style="display: inline-block">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+<div id="sign" style="display:block;">
+<div class="signon account" data-global-action="account" style="display: block;">
+<span class="signon icon icon-user icon--large icon-nib-right"></span>
+<div id="top-loader" style="display: none;">
+<img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" />
+</div>
+<span id="signon" class="signon textin">visit blog</span>
+</div>
+<div id="sigfrm" class="sigfrm" style="height:104px; display:none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display:none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr"> 
+<a class="signin-tweet account-summary"> 
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image"><div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div></div>
+<div class="signin-tweet withtt">with twitter</div>
+</div></div></div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr"> 
+<a class="signin-menu account-summary"> 
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image">
+<div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div></div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div></div></div>
+</a>
+</li><li></li></ul>
+</nav></div></div></div> 
+</li></ul></div>
+
+<div class="ccc-icon-topbar" style="margin-right:-51px;">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #1B3662"></div>
+</div></div></div>
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions" class="nav js-global-actions">
+<li class="create" data-global-action="create">
+<span class="create icon icon-quill icon--large icon-nibble-right"></span>
+<span class="create text">create</span>
+</li>
+<li id="global-nav-home" class="home active" data-global-action="home">
+</li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+<span alt="timeline">
+<span class="instore icon icon-left icon-play_left icon--large"></span>
+</span>
+<span alt="carbon">
+<span class="ccstore icon icon-right icon-play_right icon--large"></span>
+</span>
+</li></ul>
+</div></div></div></div>
+
+</div>
+
+<div class="ui-dialog-position">
+<div class="ui-dialog ui-dialog-center" tabindex="-1" role="dialog" aria-describedby="modal-email" aria-labelledby="ui-id-1">
+
+<div class="ui-dialog-titlebar">
+<span id="ui-id-1" class="ui-dialog-title"> </span>
+<button class="ui-dialog-titlebar-close ui-button" aria-disabled="false" role="button">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+</div></div></div>
+
+<div class="notices notices-center" style="position: fixed; margin-top:5px; z-index: 101; display:block">
+<ul class="notices clearfix">
+
+<li id="error_icu" class="alert error_icc">
+<span>
+<span id="error_icu_msg" class="message">crowdcc may be running in another browser window, please refresh or close this window.</span>
+</span>
+</li>
+
+<li id="hacked_icu" class="alert hacked_icc">
+<span>
+<span id="hacked_icu_msg" class="message">crowdcc: accounts</span>
+</span>
+</li>
+</ul>
+
+<div class="noticebar-close">
+<button class="ui-hacked-noticebar-close" aria-disabled="false" role="button">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+
+</div>
+
+<div class="pad-dwn"></div>
+
+<div class="ccmid" style="display:none;">
+  <object width="100%" height="100%" type="image/svg+xml" class="ccsvg" data="img/svg/ccc_logo_wht_32x32.svg"> </object>
+</div>
+
+<div id="hacked" style="display:block;">
+
+<section class="sect video splash">
+
+<div class="container_hack">
+
+<form class="form-horizontal help-form" id="account_form" >
+
+<h2><div class="head_pad head_size_center lato_black">Account plans</div></h2>
+
+<input id="authenticity_token" name="authenticity_token" type="hidden" value="ultD5FGzuit3sK4IfugwtGEfPjIdx4S6mWZYyBGplnw=" />
+
+<div id="content">
+	<p>
+	We are currently developing our account plans with our users, via direct feedback or twitter, we also love to go out and about, meetup and talk to our users.<p>
+	
+	All free accounts get a small taste of our service, with 10cc, we offer to store 10 of your favourite tweets with us absolutely free.<p>
+
+	This might seems a bit mean right now, but as we add more features to our paid accounts, we may offer to enhance free accounts with some of these new features.<p>
+
+	<div class="offer">Accounts we offer and are planned;</div><p>
+	
+	<!-- if you have new features you would like to see please let us know in the comments section. -->   
+
+</div>
+
+<div id="red" style="display:block;">
+
+<div class="locked-ok section_hack group">
+<div class="col span_1_of_2">
+<div class="acc_left_content">
+
+<div class="plan_bold">free account</div>
+          
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+
+<div> 10cc, store 10 of your favourite tweets for free. </div>
+<div> Please let us know what you think. </div>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="locked-ok section_hack group">
+<div class="col span_1_of_2">
+<div class="acc_left_content">
+
+<div class="plan_bold">standard account</div>
+          
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+
+<div> 100cc, store 100 of your favourite tweets. </div>
+<div> Please let us know what you think. </div>
+<br>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<p>
+
+
+<div class="cmail-er section_hack group">
+
+<div id="cc_btn_submit" class="cc_btn_enable">
+	<div id="submit_feedback" class="cc_btn_account">your feedback</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</form>
+
+<p class="ccform_footer align_center">
+<a target="_blank" href="../terms/privacy">Privacy Policy</a>
+</p>
+
+</section>
+</div>
+
+</div>
+<p class="account_usr_pad"> </p>
+
+<!-- default * style * start page view -->
+<style>
+
+body{background-image:linear-gradient(rgba(8,45,90,.2),rgba(8,45,90,.1)),url(/img/landing_bg_2000x1415.jpg);min-height:0;padding-bottom:0;background-position:center center;background-repeat:no-repeat;background-size:cover}.offer{font-size:19px}@media only screen and (max-width:480px){.head_size_center{font-size:2rem}.span_1_of_2,.span_2_of_2{width:100%}.offer,.p,p{font-size:18px}.acc_left_content{float:left}.span_1_of_2 .right_content{font-size:18px;text-align:left}#hacked{margin-top:20px}}
+
+
+/* new style overrides for accounts form * end */
+
+
+</style>
+
+<!-- id="su" support * help * end page view -->
+<div id="su" style="display: none; margin-top:0px;">
+
+<style type="text/css">
+
+#su .show_on_mobile,.print_only,.print_only_inline{display:none}.container,.position-relative{position:relative}.container{margin:0 auto;width:960px}#su .section.video.splash #video_form{padding:2rem 1.5rem}.helvetica{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.lato,.lato_black,.lato_bold,.lato_regular{font-family:Lato,sans-serif}.lato{font-weight:400}.lato_black{font-weight:900}.lato_bold{font-weight:700}.lato_regular{font-weight:500}.monospace{font-family:Monaco,Menlo,Consolas,"Courier New",monospace!important}.float-left{float:left!important}.float-right{float:right!important}.clear-left{clear:left}.clear-right{clear:right}.clear-both{clear:both}.position-absolute{position:absolute}.block{display:block!important}.inline-block{display:inline-block!important}.inline{display:inline!important}.align-left{text-align:left!important}.align-center{text-align:center!important}.align-right{text-align:right!important}.align_top{vertical-align:top!important}.align_middle{vertical-align:middle!important}.align_bottom{vertical-align:bottom!important}
+
+
+</style>
+
+
+<script type="text/javascript" src="js/ccc.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="js/accounts.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="js/rsa_x.js?v=1.00.00"></script>
+
+</html>
