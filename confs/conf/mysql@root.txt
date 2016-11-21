@@ -1,3 +1,0 @@
-mysql : root : beta
-
-01 : new : root : r0ll1ngSt0nEl1veSess10n  old : root : beta

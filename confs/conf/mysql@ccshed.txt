@@ -1,9 +1,0 @@
-mysql : ccshed : 0nLyaLl0wAcceSst0oUtH0usE
-
-file * db updates :
-
-* crowdcc_shed db SELECT, INSERT, UPDATE, DELETE access only
-
-* slib * config.inc.php 
-
-01 : new : ccshed : 0nLyaLl0wAcceSst0oUtH0usE  old : ccshed : 0nLyaLl0wAcceSst0oUtH0usE

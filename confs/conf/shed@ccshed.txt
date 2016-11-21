@@ -1,6 +1,0 @@
-ccshed : y01tsN0tan0utHousE
-
-/* php sheduler * to add to php files */
-include_once($_SERVER["DOCUMENT_ROOT"].'/../slib/firepjs.php');
-
-01 : new : y01tsN0tan0utHousE  old : y01tsN0tan0utHousE 
