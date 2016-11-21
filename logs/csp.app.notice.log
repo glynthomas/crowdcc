@@ -1,0 +1,75 @@
+{
+  "csp-report":{
+    "document-uri":"http://crowdcc.apc/",
+    "referrer":"",
+    "violated-directive":"script-src 'self' data: 'unsafe-inline' http://crowdcc.apc",
+    "effective-directive":"script-src",
+    "original-policy":"default-src 'self' http://crowdcc.apc ;script-src 'self' data: 'unsafe-inline' http://crowdcc.apc; object-src 'self'; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css ; img-src * 'self' data:; media-src 'self' http://crowdcc.apc; frame-src 'none';font-src 'self' http://crowdcc.apc; connect-src *;report-uri /sbin/csp.app.notice.php",
+    "blocked-uri":"",
+    "source-file":"chrome-extension://bmagokdooijbeehmkpknfglimnifench",
+    "line-number":15309,
+    "column-number":18,
+    "status-code":200
+  }
+}{
+  "csp-report":{
+    "document-uri":"http://crowdcc.apc/",
+    "referrer":"",
+    "violated-directive":"script-src 'self' data: 'unsafe-inline' http://crowdcc.apc",
+    "effective-directive":"script-src",
+    "original-policy":"default-src 'self' http://crowdcc.apc ;script-src 'self' data: 'unsafe-inline' http://crowdcc.apc; object-src 'self'; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css ; img-src * 'self' data:; media-src 'self' http://crowdcc.apc; frame-src 'none';font-src 'self' http://crowdcc.apc; connect-src *;report-uri /sbin/csp.app.notice.php",
+    "blocked-uri":"",
+    "source-file":"chrome-extension://bmagokdooijbeehmkpknfglimnifench",
+    "line-number":15309,
+    "column-number":18,
+    "status-code":200
+  }
+}{
+  "csp-report":{
+    "blocked-uri":"blob:http://crowdcc.apc/71cc23fc-cf23-084b-a1b8-e07962ada71b",
+    "document-uri":"http://crowdcc.apc/verified",
+    "original-policy":"default-src http://crowdcc.apc http://crowdcc.apc; script-src http://crowdcc.apc data: 'unsafe-inline' http://crowdcc.apc; object-src http://crowdcc.apc; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css; img-src * http://crowdcc.apc data:; media-src http://crowdcc.apc http://crowdcc.apc; frame-src 'none'; font-src http://crowdcc.apc http://crowdcc.apc; connect-src *; report-uri http://crowdcc.apc/sbin/csp.app.notice.php",
+    "referrer":"",
+    "violated-directive":"img-src * http://crowdcc.apc data:"
+  }
+}{
+  "csp-report":{
+    "blocked-uri":"blob:http://crowdcc.apc/01f55ae9-0a91-f744-8bd5-7fccd5f05c9a",
+    "document-uri":"http://crowdcc.apc/verified",
+    "original-policy":"default-src http://crowdcc.apc http://crowdcc.apc; script-src http://crowdcc.apc data: 'unsafe-inline' http://crowdcc.apc; object-src http://crowdcc.apc; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css; img-src * http://crowdcc.apc data:; media-src http://crowdcc.apc http://crowdcc.apc; frame-src 'none'; font-src http://crowdcc.apc http://crowdcc.apc; connect-src *; report-uri http://crowdcc.apc/sbin/csp.app.notice.php",
+    "referrer":"",
+    "violated-directive":"img-src * http://crowdcc.apc data:"
+  }
+}{
+  "csp-report":{
+    "blocked-uri":"blob:http://crowdcc.apc/91b9bbee-60b8-474a-8eb9-cd43da1a6fca",
+    "document-uri":"http://crowdcc.apc/verified",
+    "original-policy":"default-src http://crowdcc.apc http://crowdcc.apc; script-src http://crowdcc.apc data: 'unsafe-inline' http://crowdcc.apc; object-src http://crowdcc.apc; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css; img-src * http://crowdcc.apc data:; media-src http://crowdcc.apc http://crowdcc.apc; frame-src 'none'; font-src http://crowdcc.apc http://crowdcc.apc; connect-src *; report-uri http://crowdcc.apc/sbin/csp.app.notice.php",
+    "referrer":"",
+    "violated-directive":"img-src * http://crowdcc.apc data:"
+  }
+}{
+  "csp-report":{
+    "blocked-uri":"blob:http://crowdcc.apc/700ed424-36ac-4745-ba59-48b2f2386e0a",
+    "document-uri":"http://crowdcc.apc/verified",
+    "original-policy":"default-src http://crowdcc.apc http://crowdcc.apc; script-src http://crowdcc.apc data: 'unsafe-inline' http://crowdcc.apc; object-src http://crowdcc.apc; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css; img-src * http://crowdcc.apc data:; media-src http://crowdcc.apc http://crowdcc.apc; frame-src 'none'; font-src http://crowdcc.apc http://crowdcc.apc; connect-src *; report-uri http://crowdcc.apc/sbin/csp.app.notice.php",
+    "referrer":"",
+    "violated-directive":"img-src * http://crowdcc.apc data:"
+  }
+}{
+  "csp-report":{
+    "blocked-uri":"blob:http://crowdcc.apc/ff8c0c79-24c2-7b47-9e65-220cc65748e2",
+    "document-uri":"http://crowdcc.apc/verified",
+    "original-policy":"default-src http://crowdcc.apc http://crowdcc.apc; script-src http://crowdcc.apc data: 'unsafe-inline' http://crowdcc.apc; object-src http://crowdcc.apc; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css; img-src * http://crowdcc.apc data:; media-src http://crowdcc.apc http://crowdcc.apc; frame-src 'none'; font-src http://crowdcc.apc http://crowdcc.apc; connect-src *; report-uri http://crowdcc.apc/sbin/csp.app.notice.php",
+    "referrer":"",
+    "violated-directive":"img-src * http://crowdcc.apc data:"
+  }
+}{
+  "csp-report":{
+    "blocked-uri":"blob:http://crowdcc.apc/40cef46b-ffa6-834e-8e3b-1b5382dc58e0",
+    "document-uri":"http://crowdcc.apc/",
+    "original-policy":"default-src http://crowdcc.apc http://crowdcc.apc; script-src http://crowdcc.apc data: 'unsafe-inline' http://crowdcc.apc; object-src http://crowdcc.apc; style-src 'unsafe-inline' http://crowdcc.apc http://crowdcc.apc/css; img-src * http://crowdcc.apc data:; media-src http://crowdcc.apc http://crowdcc.apc; frame-src 'none'; font-src http://crowdcc.apc http://crowdcc.apc; connect-src *; report-uri http://crowdcc.apc/sbin/csp.app.notice.php",
+    "referrer":"",
+    "violated-directive":"img-src * http://crowdcc.apc data:"
+  }
+}
