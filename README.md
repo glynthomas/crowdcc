@@ -1,2 +1,2 @@
 # crowdcc
-twitter storage utility
+twitter tweet storage utility
