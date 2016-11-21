@@ -1,0 +1,43 @@
+
+fresh thinking :
+
+just like the hacking token system was changed (callreset.php) , because twitter changed its effective messaging string length ...
+
+we need to rebuild the signin token :: confirm :: calling :: fe :: verify :: token system for confirm :: crowdcc
+
+why ?
+
+this is because of ;
+
+1. email address length of potential 80 chars
+2. password length of potential 20 chars
+3. increase the reliability of system
+
+
+what's the problem
+
+- the token is too large clumsy (transmit / receive errors!)
+
+- the token needs to be standardised ( take account of potential lengths of email and passwords * strengthen security )
+
+- move token system(s) into the function lib if required
+
+- make it easier to trace and fix problems with the token system (debug)
+
+- more depth of token tampering / security increased
+
+
+what's the solution
+
+- back up work after client password renew upgrade
+- replace older token creation functions with new
+
+- test renew password with the new functions
+
+- back up work after client email renew upgrade
+- replace any older token creation function with new
+
+- test renew email with new functions
+
+backup work and move on ...
+

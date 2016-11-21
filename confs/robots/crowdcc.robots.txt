@@ -1,0 +1,33 @@
+# * crowdcc @crowdccHQ
+#
+# unbios.com are on mission to make excellent software which is simple and fun to use.
+#
+# *!robots.txt v1.00.00 | (c) 2015 crowdcc. | crowdcc.com/use
+
+User-agent: *
+
+Disallow: /search?
+Disallow: /search/
+Disallow: /css/
+Disallow: /error_html
+Disallow: /fonticon/
+Disallow: /fontweb/
+Disallow: /help/
+Disallow: /img/
+Disallow: /js/
+Disallow: /oauth/*
+Disallow: /plans/*
+Disallow: /shed/*
+Disallow: /terms/
+Disallow: /upimg/
+Disallow: /admin/*
+Disallow: /logout/
+Disallow: /source/*
+Disallow: /secure/*
+
+# Wait 1 second between successive requests.
+Crawl-delay: 1
+
+# Independent of user agent. Links in the sitemap are full URLs using https:// and need to match
+# the protocol of the sitemap.
+Sitemap: http://crowdcc.com/sitemaps/sitemap.xml
