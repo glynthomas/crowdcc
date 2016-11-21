@@ -1,0 +1,8 @@
+/*! twitter_cc-styles-overrides.css v1.00.00 | (c) 2015 crowdcc. | help | assoc * contact | crowdcc.com/use */
+
+#signon {margin-top: 0px; !important;font-family: sans-serif !important;}
+.nav li .text {margin-top: -3px; !important;}
+.icon-play_up {-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
+body { color: #111111; font: 16px Helvetica Neue,sans-serif !important; }
+.more-rt {margin-left: 12px;margin-right: 8px;margin-top: 1px;}
+.tab_pane ul {list-style-type: disc;}
