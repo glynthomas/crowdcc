@@ -1,0 +1,25 @@
+
+
+ref : http://www.chimply.com/Generator#classic-spinner,loopingCircle
+
+spinner-grey-40-20x20.gif
+
+head color : #66757F
+tail color : #66757F 
+width : 20 (height)
+thickness : 40
+tail angle : 260
+animation speed : -1
+background : white 
+transparent : yes
+
+spinner-white-40-24x24.gif
+
+head color : #000000
+tail color : #000000 
+width : 24 (height)
+thickness : 40
+tail angle : 260
+animation speed : -1
+background : black
+transparent : yes
