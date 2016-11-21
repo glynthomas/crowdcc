@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>security &amp; confidentiality: crowdcc</title>
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+							
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >	
+
+<link href="css/plastical.min.css?v=1.00.00" rel="stylesheet" type="text/css">
+<link href="css/fonticon.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+ 
+<div id="topbar" class="topbar">
+<div id="banners" class="js-banners"> </div>
+<div class="global-nav">
+<div class="container">
+<div class="ccc-spinner"></div>
+<div style="display: inline-block" role="navigation">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+<div id="sign">
+<div class="signon account" data-global-action="account" style="display: block;">
+<div class="signon icon icon-user icon--large icon-nib-right"></div>
+<div id="top-loader" style="display: none;"></div>
+<span id="signon" class="signon textin">visit crowdcc</span>
+</div>
+<div id="sigfrm" class="sigfrm" style="height: 104px; display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display: none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr">
+<a class="signin-tweet account-summary">
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image">
+<div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div>
+</div>
+<div class="signin-tweet withtt">with twitter</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr">
+<a class="signin-menu account-summary">
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image">
+<div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div>
+</div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li>
+<div id="signin-content" class="signin-content" style="display:none;"></div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="acc" style="display:none;">
+<div id="accfrm" style="display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="account" style="display:none;">
+<nav>
+<div> </div>
+</nav>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ccc-icon-topbar">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #484848"></div>
+</div>
+</div>
+</div>
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="create-data" class="create-data" data-global-action="create">
+<span id="create" class="nocreate icon icon-quill icon--large icon-nibble-right"></span>
+<span id="create-txt" class="nocreate text">create</span>
+</li>
+<li id="global-nav-home" class="home active" data-global-action="home"> </li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+<span id="toptiptime-data" class="" alt="timeline">
+<span id="instore" class="icon icon-left icon-play_left icon--large"></span>
+</span>
+<span id="toptipcarbs-data" class="" alt=" copy ">
+<span id="ccstore" class="icon icon-right icon-play_right icon--large"></span>
+</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="page">
+
+<div id="page_contents" >
+
+<!-- <h1>Policies</h1> -->
+
+<div id="policies" class="tab_set on_neutral_grey">
+	<a class="tabs" href="service" >Service</a>
+	<a class="tabs" href="privacy" >Privacy</a>
+	<a class="tabs" href="cookies" >Cookies</a>
+	<a class="tabs" href="use" >Use</a>
+	<a href="security" class="selected">Security</a>
+	<a class="tabs" href="archives" >Archives</a>	
+	<a class="tabs" href="bugs" class="secondary ">Bugs</a>
+	<i id="play_down" class="tab_caret fa fa-caret-down icon-play_down_med icon"></i>
+	<i id="play_up" class="tab_caret fa fa-caret-up icon-play_down_med icon icon-play_up"></i>
+</div>
+<div class="tab_pane selected">
+
+
+	<div class="col span_5_of_6">
+
+		<h1 class="large_bottom_margin">Security Practices</h1>
+
+		<p><strong>Effective: January 1, 2015</strong></p>
+
+		<p>
+			As a company, we use the Slack service for nearly all of our communication. Ensuring that the Slack service remains secure is vital to protecting our own data. The security of your information is required for our success as a business. Below are some details on our security practices.
+		</p>
+
+		<h3>Encrypted Traffic by Default, in Both Directions</h3>
+
+		<p>
+			Crowdcc uses 256-bit AES, supports TLS 1.2 when accessing our servers, and uses the ECDHE_RSA Key Exchange Algorithm. We monitor the security community's output closely and work promptly to upgrade the service to respond to new vulnerabilities as they are discovered.
+		</p>
+
+		<h3>External Security Audits</h3>
+
+		<p>
+			We contract with respected, external security firms who perform regular audits of Slack to verify that our security practices are sound and to monitor the service in light of new vulnerabilities discovered by the security research community.
+		</p>
+
+		<h3>Secure Physical Location</h3>
+
+		<p>
+			Our servers are located in Amazon's AWS data centers. They've devoted an entire portion of their site to explaining their security measures, which you can find here: <a href="https://aws.amazon.com/compliance/" target="_blank">https://aws.amazon.com/compliance/</a>
+		</p>
+
+		<h3>Security</h3>
+
+		<p>
+			The highest security risk to any system is usually the behavior of its users, we log every time your account is signed in to, noting the device used and location of the connection, and reserve the right to suspend, block or delete any user or users who's pattern of access and use is suspicious.
+		</p>
+
+		<p>
+			We will continue to roll out additional security features to enhance crowdcc and protect our users.
+		</p>
+
+
+		<h3>Confidentiality</h3>
+
+		<p>
+			We regard the information you store with us as private and confidential. We place strict controls over our employees’ access to internal data and are committed to ensuring that your data is never seen by anyone who should not see it.
+		</p>
+
+		<p>
+			While the operation of the Crowdcc service would not be possible unless there were some technical employees with sufficient system permissions to enable them to access and control software that stores and indexes the content you add, this team is kept purposefully small and are prohibited from using these permissions to view customer data unless it is necessary to do so.
+		</p>
+
+		<p>
+			All of our employees and contractors are bound to our policies regarding customer data and we treat these issues as matters of the highest importance within our company. If, in order to diagnose a problem you are having with the service, we would need to do something that would expose your personal communications to one of our employees in a readable form, we will ask for your consent prior to taking action.
+		</p>
+
+		<p>
+			There are limited circumstances when we ever share customer content without first obtaining permission. These are outlined in our <a href="terms/privacy" target="_blank">Privacy Policy</a>.
+		</p>
+
+
+		<h3>Privacy</h3>
+
+		<p>
+			If you are using Crowdcc in a workplace or on a device or account issued to you by your employer or another organization, they will almost certainly have their own policies in place regarding storage, access, modification, deletion and retention of communications and content. Please check with your employer or team administrator about what policies they have in place regarding your communications and related content.
+		</p>
+
+		<p>
+			We know how important these issues are to you. They are equally important to us. The security, privacy and confidentiality of your information are core to our success as a business and we will continue to be proactive, vigilant and diligent in ensuring its safety.
+		</p>
+
+		<p>
+			If you have additional questions regarding data privacy, security or confidentiality, we’d be happy to answer them. Please write to <a href="mailto:feedback@crowdcc.com">feedback@crowdcc.com</a> and we’ll respond as quickly as we can.
+		</p>
+
+		<p>
+			If you believe you have found a security vulnerability on Crowdcc, we encourage you to let us know right away. We will investigate all legitimate reports and do our best to quickly fix the problem. See our guidelines on <a href="/terms/bugs" target="_blank">Reporting Security Vulnerabilities</a>.
+		</p>
+
+	</div>
+
+		
+<div class="clear_both"></div>
+</div>
+		
+</div>
+<div id="overlay"></div>
+</div>
+
+<script type="text/javascript" src="js/ccc.min.js?v=1.00.00" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/terms.min.js?v=1.00.00" crossorigin="anonymous"></script>
+
+</body>
+</html>

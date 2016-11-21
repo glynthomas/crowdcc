@@ -1,0 +1,17 @@
+
+var LATEST_WMM_version = "4.0";
+var LATEST_WMM_functions_version = "4.0";
+var LATEST_phpAutoMembersArea_version = "3.64";
+var LATEST_functions_version = "3.64";
+var LATEST_phpJobScheduler_version = "3.8";
+var LATEST_phpMySQLAutoBackup_version = "1.6.3";
+function checkPJS() { //phpJobScheduler - stop old versions adding jobs.................................................................... 
+if(document.I_F!=null)//phpJobScheduler add/modify form name
+	{
+	if (LATEST_phpJobScheduler_version!=phpJobScheduler_version)
+ 	{ document.I_F.button.disabled=true;
+ 	 alert("NOW unable to add or modify jobs as phpJobScheduler is out-of-date, please upgrade.\n\nPlease see link above (UPGRADE REQUIRED Please visit here...)");
+ 	  }
+ 	   }
+ 	    } setTimeout ( "checkPJS()", 1000 );
+ 	   //called 1 seconds later else phpJobScheduler_version will be undefined

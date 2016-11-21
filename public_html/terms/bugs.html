@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>bugs &amp; reporting security vulnerabilities: crowdcc</title>
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >							
+
+<link href="css/plastical.min.css?v=1.00.00" rel="stylesheet" type="text/css">
+<link href="css/fonticon.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+ 
+<div id="topbar" class="topbar">
+<div id="banners" class="js-banners"> </div>
+<div class="global-nav">
+<div class="container">
+<div class="ccc-spinner"></div>
+<div style="display: inline-block" role="navigation">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+<div id="sign">
+<div class="signon account" data-global-action="account" style="display: block;">
+<div class="signon icon icon-user icon--large icon-nib-right"></div>
+<div id="top-loader" style="display: none;"></div>
+<span id="signon" class="signon textin">visit crowdcc</span>
+</div>
+<div id="sigfrm" class="sigfrm" style="height: 104px; display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display: none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr">
+<a class="signin-tweet account-summary">
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image">
+<div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div>
+</div>
+<div class="signin-tweet withtt">with twitter</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr">
+<a class="signin-menu account-summary">
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image">
+<div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div>
+</div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li>
+<div id="signin-content" class="signin-content" style="display:none;"></div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="acc" style="display:none;">
+<div id="accfrm" style="display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="account" style="display:none;">
+<nav>
+<div> </div>
+</nav>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ccc-icon-topbar">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #484848"></div>
+</div>
+</div>
+</div>
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="create-data" class="create-data" data-global-action="create">
+<span id="create" class="nocreate icon icon-quill icon--large icon-nibble-right"></span>
+<span id="create-txt" class="nocreate text">create</span>
+</li>
+<li id="global-nav-home" class="home active" data-global-action="home"> </li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+<span id="toptiptime-data" class="" alt="timeline">
+<span id="instore" class="icon icon-left icon-play_left icon--large"></span>
+</span>
+<span id="toptipcarbs-data" class="" alt=" copy ">
+<span id="ccstore" class="icon icon-right icon-play_right icon--large"></span>
+</span>
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="page">
+
+<div id="page_contents" >
+
+<!-- <h1>Policies</h1> -->
+
+<div id="policies" class="tab_set on_neutral_grey">
+	<a class="tabs" href="service" >Service</a>
+	<a class="tabs" href="software" >Software</a>
+	<a class="tabs" href="privacy" >Privacy</a>
+	<a class="tabs" href="cookies" >Cookies</a>
+    <a class="tabs" href="use" >Use</a>
+	<!-- <a class="tabs" href="security" >Security</a> -->
+	<a class="tabs" href="archives" >Archives</a>	
+	<a href="bugs" class="secondary selected">Bugs</a>
+	<i id="play_down" class="tab_caret fa fa-caret-down icon-play_down_med icon"></i>
+	<i id="play_up" class="tab_caret fa fa-caret-up icon-play_down_med icon icon-play_up"></i>
+</div>
+<div class="tab_pane selected">
+
+	<div class="col span_5_of_6 clearfix">
+
+		<h1 class="large_bottom_margin">Bugs & Reporting security vulnerabilities</h1>
+
+		<p><strong>Effective: January 1, 2015</strong></p>
+
+		<p>This page is intended for security researchers. If you believe you have found a security vulnerability on crowdcc we encourage you to let us know right away.  We investigate all legitimate reports and do our best to quickly fix the problem.</p>
+
+		<p>Please review this pages topics before contacting us.  To report a security vulnerability, please email <a href="mailto:security@crowdcc.com">security@crowdcc.com</a></p>
+
+		<h3>Security & Confidentiality</h3>
+
+		<p>Every person using crowdcc expects their data to be private, secure and confidential. We understand how important this is to our customers and work to the best of our abilities to ensure all three expectations are met. Please review the information below regarding our current policies and practices. This is a living document and we will update it as our service evolves and industry practices change.</p>
+
+		<h3>Privacy</h3>
+
+		<p>When you signup to crowdcc either directly using your confirmed email address or via twitter.com or another social network provider we store your details, security infomation is
+		always encrypted (passwords, tokens) in order to protect your information.</p>
+		</p>
+			
+		<h3>Security</h3>
+		<p>As a company, we use crowdcc everyday, ensuring the service remains secure is vital to protecting our own data. We protect your data with the exact same mechanisms we use to protect our own. The security of your information is required for our success as a business. Below are some details on our security practices.</p>
+
+		<h4>100% Encrypted Traffic, in Both Directions</h4>
+		<p>Absolutely nothing goes over the network in clear text. crowdcc framework supports different types of encryption for all of your social posts, including RSA Key Exchange Algorithms. We monitor the security community's output closely and work promptly to upgrade the service to respond to new vulnerabilities as they are discovered.</p>
+
+		<h4>External Security Audits</h4>
+		<p>We contract with respected external security firms who perform regular audits of crowdcc to verify that our security practices are sound and to monitor the service in light of new vulnerabilities discovered by the security research community.</p>
+
+		<h4>Secure Physical Location</h4>
+		<p>Our servers are located in Amazon's AWS data centers. They've devoted an entire portion of their site to explaining their security measures, which you can find here: <a href="http://aws.amazon.com/compliance/">http://aws.amazon.com/compliance/</a></p>
+
+		<h4>Experienced Team</h4>
+		<p>We've been putting services on the internet for a long time. We're good at it. Our engineering, quality assurance and technical operations team members are experienced and keep their skills up to date as industry best practices evolve. We’ve coded, tested and administered services running on thousands of physical servers in data centers around the world and we bring the collective wisdom that comes with many decades of secure practice to operation of the crowdcc service.</p>
+
+		<h3>Bugs</h3>
+
+		<p>Bugs can be annoying, interupting your workflow and enjoyment of using our software and sometimes maybe related to a security vulnerability or potential vulnerability.</p>
+
+		<p>If you believe you have found a bug or a security vulnerability on crowdcc, we encourage you to let us know right away. We will investigate all legitimate reports and do our best to quickly fix the problem.</p>
+		
+		<p>To report a bug or a security vulnerability, please email <a href="mailto:security@crowdcc.com">security@crowdcc.com</a></p>
+		
+		<!-- <p>Please <a href="https://hackerone.com/slack/reports/new" class="bold">submit your report on HackerOne</a> and our security team will respond as soon as possible.</p> -->
+
+		<h3>Responsible Disclosure Policy</h3>
+		<p>If you give us a reasonable time to respond to your report before making any information public and make a good faith effort to avoid privacy violations, destruction of data and interruption or degradation of our service during your research, we will not bring any lawsuit against you or ask law enforcement to investigate you.</p>
+		<p>To show our appreciation for our security researchers, we offer a monetary bounty for certain qualifying security bugs.</p>
+
+		<h3>Bug Bounty Rewards</h3>
+		<ul>
+			<!-- <li>Our minimum reward is <strong>$100 USD</strong> for minor issues, while we expect to reward <strong>$500+ USD</strong> for major vulnerabilities</li> -->
+			<li>As we are a very small startup, our minimum reward currently for legitimate reported bugs is with a cudos tweet of thanks to our followers and a tee shirt (subject to availability and can be posted to an address in England, Wales or Scotland) for major vulnerabilities we will in addtion to our thanks send you a crowdcc swag collection (subject to availability and can be posted to an address in England, Wales or Scotland) </li>
+			<li>There is no maximum reward: each bug is awarded a bounty based on its severity and creativity</li>
+			<li>Only 1 bounty per security bug will be awarded</li>
+		</ul>
+
+
+		<h3>Bug Bounty Eligibility</h3>
+		<p>To qualify for a bounty, you must:</p>
+		<ul>
+			<li>Adhere to our Responsible Disclosure Policy (above)</li>
+			<li>Be the first person to responsibly disclose the bug</li>
+			<li>Report a bug that could compromise the integrity of crowdcc user data, circumvent the privacy protections of crowdcc user data, or enable access to a system within the crowdcc infrastructure, such as:
+				<ul>
+				<li>Cross-Site Scripting (XSS)</li>
+				<li>Cross-Site Request Forgery (CSRF/XSRF)</li>
+				<li>Broken Authentication</li>
+				<li>Remote Code Execution</li>
+				<li>Privilege Escalation</li>
+				<li>Provisioning Errors</li>
+				</ul></li>
+			<li>Please only test with your own team when investigating bugs. Automated testing is not permitted.</li>
+			<li>Do not interact with other accounts without the consent of their owners.</li>
+			<li>Reside in a country not under any current U.S. Sanctions (e.g., North Korea, Libya, Cuba, etc.)</li>
+		</ul>
+
+		<p>Our security team will assess each bug to determine if it qualifies.</p>
+
+
+		<h3>Exclusions</h3>
+
+		<p>The following bugs are not eligible for a bounty (and we do not recommend testing for these):</p>
+		<ul>
+			<li>Security bugs in third-party applications built on the crowdcc API</li>
+			<li>Security bugs in our social network API partners (twitter or any other partners)</li>
+			<li>Security bugs in third-party services that integrate with crowdcc</li>
+			<li>Denial of Service Vulnerabilities</li>
+			<li>Spam or Social Engineering techniques</li>
+		</ul>
+
+	</div>
+
+
+<div class="clear_both"></div>
+</div>
+		
+</div>
+<div id="overlay"></div>
+</div>
+
+<script type="text/javascript" src="js/ccc.min.js?v=1.00.00" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/terms.min.js?v=1.00.00" crossorigin="anonymous"></script>
+
+</body>
+</html>

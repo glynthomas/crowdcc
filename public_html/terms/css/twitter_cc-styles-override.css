@@ -1,0 +1,9 @@
+/*! twitter_cc-styles-overrides.css v1.00.00 | (c) 2015 crowdcc. | terms | crowdcc.com/use */
+
+#signon {margin-top: 0px; !important;font-family: sans-serif !important;}
+.nav li .text {margin-top: 0px; !important;}
+.ccc-icon-topbar {margin-top: 9px !important;}
+.icon-play_up {-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);}
+body {background: none repeat scroll 0 0 #fefefd;font-size: 16px;color: #555549;font-family: "Lato",sans-serif!important;margin: 0; padding: 0;}
+h1 { font-weight: 400 !important;}
+.tab_pane ul {list-style-type: disc;}

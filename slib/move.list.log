@@ -1,0 +1,95 @@
+/**********************************************************
+ *             **   move.list.log   **                    *
+ *           modded:  glynthomas.net                      *
+ *    phpJobScheduler © Copyright 2003 DWalker.co.uk      *
+ *              All rights reserved.                      *
+ **********************************************************
+
+Move.list : config files moved from /shed directory to out
+of the document root.
+
+
+All files moved to /slib for added security ( out of document root )
+
+
+config.inc.php :
+
+old | include_once("config.inc.php"); | new | include_once($_SERVER["DOCUMENT_ROOT"].'/../slib/config.inc.php');
+file moved (from /shed to /slib ) : config.inc.php
+file(s) affected : *functions.php | phpjobscheduler.php
+
+constants.inc.php :
+
+old | include_once("constants.php"); | new | include_once($_SERVER["DOCUMENT_ROOT"].'/../slib/constants.php');
+file moved (from /shed to /slib ) : constants.php
+file(s) affected : *functions.php | phpjobscheduler.php | firepjs.php
+
+functions.php : ( now moved to /slib )
+
+old | include_once("functions.php"); | new | include_once($_SERVER["DOCUMENT_ROOT"].'/../slib/functions.php');
+file moved (from /shed to /slib ) : functions.php
+file(s) affected : functions.php | add-modify.php | delete.php | error-logs.php | firepjs.php | index.php | modify.php | phpjobscheduler.php 
+
+delete.php : ( now moved to /slib )
+
+old | delete.php | new | delete.php with a link to the location of the delete.php file in /slib ( work around )
+file moved (from /shed to /slib ) : delete.php
+file(s) affected : functions.php | phpjobscheduler.php 
+
+modify.php : ( now moved to /slib )
+
+old | modify.php | new | modify.php with a link to the location of the modify.php file in /slib ( work around )
+file moved (from /shed to /slib ) : modify.php
+file(s) affected : functions.php | phpjobscheduler.php 
+
+add-modify.php : ( now moved to /slib )
+
+old | add-modify.php | new | add-modify.php with a link to the location of the add-modify.php file in /slib ( work around )
+file moved (from /shed to /slib ) : add-modify.php
+file(s) affected : functions.php | phpjobscheduler.php 
+
+
+
+
+
+
+
+
+
+
+/**********************************************************
+ *                phpJobScheduler                         *
+ *           Author:  DWalker.co.uk                       *
+ *    phpJobScheduler © Copyright 2003 DWalker.co.uk      *
+ *              All rights reserved.                      *
+ **********************************************************
+ *        Launch Date:  Oct 2003                          *
+ *     Version    Date              Comment               *
+ *     1.0       14th Oct 2003      Original release      *
+ *     3.0       Nov 2005       Released under GPL/GNU    *
+ *     3.0       Nov 2005       Released under GPL/GNU    *
+ *     3.1       June 2006       Fixed modify issues,     *
+ *                               and other minor issues   *
+ *     3.3       Dec 2006     removed bugs/improved code  *
+ *     3.4       Nov 2007     AJAX, and improved script   *
+ *                           include using CURL and       *
+ *                            fsockopen                   *
+ *     3.5       Dec 2008    Improvements, including      *
+ *                          single fire,                  *
+ *                          silent db connect,            *
+ *                          fire time in minutes          *
+ *     3.6     Oct 2009    Version check added            *
+ *     3.7     Feb 2011 - DEBUG improved to aid install,  *
+ *        and new method added to ensure only one         *
+ *         instance of the same script runs at any one    *
+ *         time.                                          *
+ *     3.8 April 2012 - Corrected issue stopping the      *
+ *      database updating and logs being saved when a     *
+ *      schedule was fired.                               *
+ *      Also, amended the db structure to ensure logs are *
+ *      saved when two or more schedules run at the same  *
+ *      time.                                             *
+ *                                                        *       
+ **********************************************************/
+
+
