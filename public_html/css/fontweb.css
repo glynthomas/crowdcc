@@ -1,0 +1,11 @@
+/*! fontweb.css v1.00.00 | (c) 2015 crowdcc. | assoc * contact | crowdcc.com/use */
+
+@font-face {font-family: 'Lato';font-style: normal;font-weight: 300;src: local('Lato Light'), local('Lato-Light'),url('/fontweb/lato/Lato-Light.woff2') format('woff2'),url('/fontweb/lato/Lato-Light.woff') format('woff');}
+@font-face {font-family: 'Lato';font-style: normal;font-weight: 400;src: local('Lato-Regular'), local('Lato-Regular'),url('/fontweb/lato/Lato-Regular.woff2') format('woff2'),url('/fontweb/lato/Lato-Regular.woff') format('woff');}
+@font-face {font-family: 'Lato';font-style: normal;font-weight: 700;src: local('Lato Bold'), local('Lato-Bold'),url('/fontweb/lato/Lato-Bold.woff2') format('woff2'),url('/fontweb/lato/Lato-Bold.woff') format('woff');}
+@font-face {font-family: 'Lato';font-style: normal;font-weight: 900;src: local('Lato Black'), local('Lato-Black'),url('/fontweb/lato/Lato-Black.woff2') format('woff2'),url('/fontweb/lato/Lato-Black.woff') format('woff');}
+
+@font-face {font-family: 'Lato';font-style: italic;font-weight: 300;src: local('Lato Light Italic'), local('Lato-LightItalic'), url('/fontweb/lato/Lato-LightItalic.woff2') format('woff2'), url('/fontweb/lato/Lato-LightItalic.woff') format('woff');}
+@font-face {font-family: 'Lato';font-style: italic;font-weight: 400;src: local('Lato Italic'), local('Lato-Italic'), url('/fontweb/lato/Lato-Italic.woff2') format('woff2'), url('/fontweb/lato/Lato-Italic.woff') format('woff');}
+@font-face {font-family: 'Lato';font-style: italic;font-weight: 700;src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url('/fontweb/lato/Lato-BoldItalic.woff2') format('woff2'), url('/fontweb/lato/Lato-BoldItalic.woff') format('woff');}
+@font-face {font-family: 'Lato';font-style: italic;font-weight: 900;src: local('Lato Black Italic'), local('Lato-BlackItalic'), url('/fontweb/lato/Lato-BlackItalic.woff2') format('woff2'), url('/fontweb/lato/Lato-BlackItalic.woff') format('woff');}

@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<!--/*! index.html v2.00.00 | (c) 2015 crowdcc. | crowdcc.com/use */-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>crowdcc</title>
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta property="og:type" 		content="website"/>
+<meta property="og:site_name" 	content="crowdcc"/>
+<meta property="og:image" 		content="/img/icons/app-200x200.png"/>
+<meta property="og:title" 		content="crowdcc: copy, read everything"/>
+<meta property="og:description" content="manage your social content, read everything, at once in one place, store, read later."/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@crowdcchq">
+<meta name="twitter:title" content="crowdcc: copy, read everything">
+<meta name="twitter:description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="twitter:image" content="/img/twitter-card.png"/>
+<meta property="twitter:account_id" content="2798099239" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >
+
+<link href="/css/modmen.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="/css/fonticon.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<input id="authenticity_token" name="authenticity_token" type="hidden" value="333dc638eb62fe4a57964afedfb2bac0a0e333" />
+
+<div id="topbar" class="topbar">
+<div id="banners" class="js-banners"> </div>
+  
+<div class="global-nav">
+
+<div class="container">
+    
+<div class="ccc-spinner"></div>
+<div role="navigation" style="display: inline-block">
+<ul id="global-actions-left" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+
+
+<div id="sign" style="display:block;">
+<div class="signon account" data-global-action="account" style="display: block;">
+<span class="signon icon icon-user icon--large icon-nib-right"></span>
+<div id="top-loader" style="display: none;">
+<img src="/img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" />
+</div>
+
+<span id="signon" class="signon textin">sign in</span>
+
+</div>
+<div id="sigfrm" class="sigfrm" style="height:104px; display:none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display:none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr"> 
+<a class="signin-tweet account-summary"> 
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image">
+<div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div>
+</div>
+<div class="signin-tweet withtt">with twitter</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr"> 
+<a class="signin-menu account-summary"> 
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image">
+<div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div>
+</div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li>
+<div id="signin-content" class="signin-content" style="display:none;">
+<div class="ecode_row">
+<input id="email" class="email" type="text" placeholder="twitter username" value="" autocomplete="on" value="" name="email" />
+</div>
+<div id="ecode_msg">&nbsp;</div>
+<div class="pcode_row">
+<input id="passcode" class="passcode" type="password" placeholder="password" autocomplete="off" name="passcode" />
+</div>
+<div id="pcode_msg">&nbsp;</div>
+<div id="pcode_forgot" class="btn_reset_pcode pcode_forgot">forgotten password?</div>
+<div class="radio_row_1">
+<input id="signin_radio_1" class="signin_radio" name="signin_radio" type="radio" value="new_usr" autocomplete="off"/>
+<label for="signin_radio_1" class="sign_radio" style="cursor: pointer;">i am new to crowdcc</label>
+</div>
+<div class="radio_row_2">
+<input id="signin_radio_2" class="signin_radio" name="signin_radio" type="radio" value="cur_usr" checked="checked" autocomplete="off"/>
+<label for="signin_radio_2" class="sign_radio" style="cursor: pointer;">yes i have a password</label>
+</div>                
+<div class="submit-actions">                  
+<input class="signin-crowdcc-btn sign-btn btn" name="signin_button" type="submit" value="sign in" >                  
+</div> 
+</div>
+</li> 
+</ul>
+</nav>
+</div>
+</div>
+</div> 
+
+
+<div id="acc" style="display:none;">
+<div id="loader" style="display: none;"><img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" /></div>
+<div id="fromuser_img" class="me account" data-global-action="account" style="display: block;">
+
+<span class="me icon icon-user icon--large icon-nib-right"></span>
+<span id="me" class="me textin">me</span>
+
+</div>
+<div id="accfrm" style="display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+
+<div id="account" style="display:none;">
+<nav>
+<ul>
+<li id="acc-usr" data-name="acc-usr">
+
+<a id="fromuser_id" class="account-summary">
+
+<div id="user_id" class="account-group js-mini-current-user" data-screen-name="" data-user-id="295131454">
+<div class="fromuser_table clearfix">
+<div class="fromuser_table_row">
+<div class="image">
+<img class="avatar-menu size32" src="">
+</div>
+<div class="fromuser"></div>
+<div class="fromuser_table_row">
+<div class="fromuser_profile"></div>
+</div>
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+
+<li id="acc-space" class="acc-space" data-name="acc-space">
+<a id="acc-spa-tag" class="acc-space" data-nav="acc-space">space : <span id="acc-spa-tag-num" class="acc-space">10</span><span id="acc-spa-tag-cc">cc</span></a>
+</li>
+<li id="acc-status">
+<a id="account-signup" class="signup-ccc" data-nav="upgrade-account" style="display:none;">signup to crowdcc</a>
+<a id="account-upgrade" class="acc-upgrade" data-nav="upgrade-account" style="display:none;">upgrade</a>
+</li>
+<li id="divide-two" class="dropdown-divider" style="display:none;"></li>
+<li id="acc-settings" class="acc-settings">	
+	
+<a id="acc-set-tag" class="acc-settings" class="js-keyboard-shortcut-trigger" data-nav="shortcuts" style="display:none;">settings</a>
+<a id="account-confirm" class="confirm_ecode" data-nav="confirm-ecode" style="display:none;">confirm email</a>
+</li>
+<li id="divide-three" class="dropdown-divider"></li>
+<li id="acc-help" class="acc-help">
+<a id="acc-hel-tag" class="acc-help" class="js-nav" data-nav="acc-help">help</a>
+</li>
+<li id="signout-btn">
+<a id="account-signout" class="signout-button" data-nav="signout" >sign out</a>
+</li>
+</ul>
+</nav>
+<div>
+</div>
+</div>
+</div> 
+
+
+</li>
+</ul>
+</div>
+
+<div class="ccc-icon-topbar">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">
+  
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #484848"></div>
+   
+</div>
+</div>
+</div>
+
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions-right" class="nav js-global-actions">
+
+<li id="create-data" class="create-data" data-global-action="create">
+
+<span id="create" class="nocreate icon icon-quill icon--large icon-nibble-right"></span>
+<span id="create-txt" class="nocreate text">create</span>
+
+</li>
+
+<li id="global-nav-home" class="home active" data-global-action="home">
+</li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+
+<span id="toptiptime-data" class="" alt="timeline">              
+<span id="instore" class="icon icon-left icon-play_left icon--large"></span>
+</span>
+
+<span id="toptipcarbs-data" class="" alt="&nbsp;&nbsp;copy&nbsp;&nbsp;"> 
+<span id="ccstore" class="icon icon-right icon-play_right icon--large"></span>
+</span>
+
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- 
+<div id="watchbar" class="watchbar watcher">
+<div id="ccwatch" style="background-color: #FF0000;" class="timer wbc">00:00:00:0:0:normal</div>
+<button type="button" onclick="resetcc();startcc()">start!</button>
+<button type="button" onclick="pausecc()">pause</button>
+<button type="button" onclick="resumecc()">resume</button>
+<button type="button" onclick="resetcc()">stop!</button>
+<button type="button" onclick="ccc_toploader()">toploader!</button>
+<button type="button" onclick="read_ccin_obj(tw.cp[0]);">read_ccin!</button>
+-->
+
+</div>
+
+<!-- start of the content share modal -->
+
+<section class="semantic-content" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" style="display:none">
+    
+<div id="modal-inner" class="modal-inner">  
+<header>
+<div class="modal-header">
+
+<h3 id="retweet-tweet-dialog-header" class="modal-title" style="display:block">Share</h3>
+<h3 id="reply-tweet-dialog-header"   class="modal-title" style="display:none"> <span aria-hidden="true" id="js-reply_countdown" class="modal-share-count js-new_countdown">&nbsp;</span> </h3>
+<h3 id="mail-tweet-dialog-header"   class="modal-title" style="display:none"> <span aria-hidden="true" id="js-mail_countdown" class="modal-share-count js-new_countdown">&nbsp;</span> </h3>
+<h3 id="create-tweet-dialog-header"  class="modal-title" style="display:none"> <span aria-hidden="true" id="js-new_countdown" class="modal-share-count js-new_countdown">&nbsp;</span> </h3>
+
+<div class="modal-action">
+
+<span aria-hidden="true" id="modal-quill" class="modal-quill icon-quill-drk"></span>
+<span aria-hidden="true" id="js-countdown" class="modal-carbon-count js-countdown"></span>
+<div id="modal-cancel"><span class="js-cancel-modal modal-cancel" data-dismiss="modal"></span></div>
+
+<div id="modal-action-row">
+<div id="modal-email-table"> <span aria-hidden="true" id="modal-email" class="modal-email icon-email"></span> </div>
+<div id="modal-reply-table"> <span aria-hidden="true" id="modal-reply" class="modal-reply icon-reply"></span> </div>
+<div id="modal-favor-table"> <span aria-hidden="true" id="modal-favor" class="modal-favor icon-favor"></span> </div>
+<div id="modal-retweet-table"> <span aria-hidden="true" id="modal-retweet" class="modal-retweet icon-retweet"></span> </div>
+<div id="modal-cancel-table"><span class="js-cancel-modal modal-cancel-table" data-dismiss="modal"></span></div>
+
+</div>
+</div>
+
+</div>
+<div id="modal-label"></div>
+</header>
+<div class="modal-content">
+
+<div class="share-form" style="display:none;">  
+<form id="share-form" class="share-form" name="share-form">
+<div id='js-share-new' name="share-new" class="new-text-input js-text-new">
+
+<div class="twitter-pic" contenteditable="false">
+<a target="_blank" href="">
+<img class="grayimg" width="42" height="42" alt="twitter icon" src="">
+</a>
+</div>
+
+<span class="tweetprofilelink" spellcheck="false">
+<strong>
+<a class="urlprofilelink" target="_blank" title="" href=""></a>
+</strong>
+</span>
+<span class="new-share-time">
+<a target="_blank" href="" title="now">now</a>
+</span>
+<div id="js-srctxt-new" aria-multiline="true" spellcheck="true" contenteditable="true"></div>
+
+<canvas id="img-place" width="50" height="50" ></canvas>
+</div>
+</form>
+</div>
+
+<div class="retweet-form" style="display:block;"> 
+<form id="share-retweet-form" class="share-retweet-form" name="share-retweet-form">
+<div id='js-share-retweettweet' name="share-retweettweet" class="text-input js-text-retweettweet"></div>
+<span>&nbsp;</span>
+</form>
+</div>
+
+<div class="reply-form" style="display:none;"> 
+
+<form id="share-reply-form" class="share-reply-form" name="share-reply-form">
+<div id='js-share-replytweet' name="share-replytweet" class="text-input js-text-replytweet"></div>
+<span class="reply-line">&nbsp;</span>
+<div id="js-reply-new" class="new-text-input js-text-new reply-tweet" name="reply-tweet">
+
+<div class="twitter-pic" contenteditable="false">
+<a target="_blank" href="">
+<img class="grayimg" width="42" height="42" alt="twitter icon" src="">
+</a>
+</div>
+
+<span class="tweetprofilelink" spellcheck="false">
+<strong>
+<a class="urlprofilelink" target="_blank" title="" href=""></a>
+</strong>
+</span>
+
+<span class="new-share-time">
+<a title="now" href="" target="_blank">now</a>
+</span>
+
+<div id="js-srctxt-reply" aria-multiline="true" spellcheck="true" contenteditable="true"></div>
+<canvas id="reply-img-place" width="50" height="50" ></canvas>
+</div>
+</form>
+
+</div>
+
+<form method="post" accept-charset="utf-8" name="form-img">
+<input name="hidden_data" id='hidden_data' type="hidden"/>
+</form>
+
+<div class="email-form" style="display:none;"> 
+<form class="share-email-form" name="share-email-form">
+<div class="share-tweet-from">
+  
+<span class="field-label">From:</span>
+<span id="email-frm" class="field-text js-share-tweet-subject"></span>
+</div>
+<div class="share-tweet-to">
+<label class="field-label to-label" for="share-tweet-emails">To:</label>
+<input id="email-to" class="text-input js-share-tweet-emails" type="text" name="share-tweet-emails" placeholder="name@example.com, name@example.com">
+</div>  
+
+<div class="share-email-comment">
+
+<div id="js-srctxt-mail" aria-multiline="true" spellcheck="true" contenteditable="true" data-cm-placeholder="Add a comment..."></div>
+
+<div class="placeholding-input">
+
+</div>
+<div id='js-share-email' name="share-email" class="js-text-email"></div>
+</div>
+
+</form>
+</div>
+</div>  
+<footer>
+
+<div class="retweet-footer" style="display:block;"> 
+<p>
+<a class="js-cancel-modal btn-drk btn" title="Close this modal" data-dismiss="modal">Cancel</a>
+<a id="retweet-button" class="js-retweet close-action send-action" data-dismiss="modal">Retweet</a>
+</p>
+</div>
+
+<div class="favor-footer" style="display:none;"> 
+<p>
+<a class="js-cancel-modal btn-drk btn" title="Close this modal" data-dismiss="modal">Cancel</a>
+<a id="favor-button" class="js-favor close-action send-action" data-dismiss="modal">Favor</a>
+</p>
+</div>
+
+<div class="reply-footer" style="display:none;">  
+<p>
+<a class="js-cancel-modal btn-drk btn" title="Close this modal" data-dismiss="modal">Cancel</a>
+<a id="reply-button" class="js-reply btn-gray send-action" data-dismiss="modal">Reply</a>
+
+<div class="img-upload btn-light btn">
+<span class="icon-camera img-up"></span>
+<input id="reply-fileinput" class="upload" type="file" title="">
+</div>
+</div>
+
+<div class="share-footer" style="display:none;">  
+<p>
+<a class="js-cancel-modal btn-drk btn" title="Close this modal" data-dismiss="modal">Cancel</a>
+<a id="share-button" class="js-reshare btn-gray send-action" data-dismiss="modal">Share</a>
+
+<div class="img-upload btn-light btn">
+<span class="icon-camera img-up"></span>
+<input id="fileinput" class="upload" type="file" title="">
+</div>
+</div>
+
+<div class="email-footer" style="display:none;">  
+<p>
+<a class="js-cancel-modal btn-drk btn" title="Close this modal" data-dismiss="modal">Cancel</a>
+<a id="email-button" class="js-post btn-gray send-action" title="Email Tweet" data-dismiss="modal">Email</a>
+</p>
+</div>
+</footer>
+</div>
+
+<div class="ui-dialog-position">
+
+<div id="ui-dialog" class="ui-dialog ui-dialog-center" tabindex="-1" role="dialog" aria-describedby="modal-email" aria-labelledby="ui-id-1">
+  
+<div class="ui-dialog-titlebar">
+<span id="ui-id-1" class="ui-dialog-title"> </span>
+<button class="ui-dialog-titlebar-close ui-button" role="button" aria-disabled="false">
+
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+  
+<div class="ui-dialog-content">
+
+<span class="ui-dialog-account-help">
+<h3>Help</h3>
+<div class="msg-help-outer">
+
+<div class="msg-help">
+with any crowdcc <a href="https://twitter.com/intent/tweet?text=@crowdccHQ my issue is, for example, my account is blocked ... &hashtags=ccounts" target="_blank">account</a> issues or if you find a software <a href="https://twitter.com/intent/tweet?text=@crowdccHQ my issue is, for example, when i sign out something strange happens ... &hashtags=ccbugs" target="_blank" style="color: #EF6471">bug</a>, please let us know by sending us a <a href="https://twitter.com/crowdccHQ" target="_blank">tweet</a> or direct message, including your twitter username, the browser you are using, the version of the browser and the issue you are having and we will contact you as soon as we can.
+</div>
+
+</div>
+
+<div class="row">
+
+</div>
+<div class="modal-buttons" class="clearfix">
+<input id="btn_help_close" class="help-crowdcc-btn close-action send-action btn-pad" type="submit" value="OK">
+</div>
+
+<div class="modal-social-follow" style="display: block;"> 
+
+<input id="modal-social-follow-help-checkbox" type="checkbox" checked="checked">
+<span class="follow-pad">follow <a target="_blank" href="http://twitter.com/crowdccHQ">us</a></span><div class="label-break-med">on twitter</div>
+
+
+</div>
+<div class="modal-social-follow-button"></div>
+</span>
+
+
+<span class="ui-dialog-account-space">
+
+<h3>
+<img  id="profile_img_space" class="me account icon avatar-spacebar size32" src="/img/default_profile_4_normal.png" />
+<span id="profile_space" class="profile_space"></span>
+</h3>
+<div class="state">
+<dl style="width: 102.7%">
+<dt><span class="state-acc">account : <span><span id="_state" class="state-acc-max"></span></dt>
+<br>
+<dd><div id="bar-used" class="bar used" style="width: 15%"></div><div id="bar-free" class="bar free" style="width: 85%"></div></dd>
+</dl>
+<div id="_state-center" class="state-center"></div>
+<div class="state-recommend-outer">
+<div id="_state-recommend" class="state-recommend"></div>
+</div>
+</div>
+
+<div class="modal-buttons" class="clearfix">
+<input id="btn_space_close" class="space-crowdcc-btn close-action send-action btn-pad" type="submit" value="OK">
+</div>
+
+<div class="modal-social-follow" style="display: block;"> 
+
+<input id="modal-social-follow-space-checkbox" type="checkbox" checked="checked">
+<span class="follow-pad">follow <a target="_blank" href="http://twitter.com/crowdccHQ">us</a></span><div class="label-break-med">on twitter</div>
+
+</div>
+<div class="modal-social-follow-button"></div>
+</span>
+
+
+<span class="ui-dialog-account-upgrade">
+<h3>Upgrade crowdcc: >50cc</h3>  
+<p>mmm ... we have not figured this out yet, while we think about account options, please let us know your thoughts, at ...
+<a href="https://twitter.com/crowdccHQ" target="_blank">@crowdccHQ</a></p>
+<div class="row"> 
+&nbsp;
+</div>
+<div class="modal-buttons" class="clearfix">
+<input id="btn_upgrade_close" class="button vanilla primary center" type="submit" value="OK" style="float: right;">
+
+</div>
+
+<div class="modal-social-follow" style="display: block;">
+<input id="modal-social-follow-upgrade-checkbox" type="checkbox" checked="checked">
+<span class="follow-pad">follow <a target="_blank" href="http://twitter.com/crowdccHQ">us</a></span><div class="label-break-med">on twitter</div>
+
+</div>
+<div class="modal-social-follow-button"></div>
+</span>
+
+<span class="ui-dialog-social-content">
+<h3>Complete your account</h3>  
+<p>To complete your crowdcc account please add a social network.</p> 
+<div class="modal-buttons" class="clearfix">
+<a class="signin-tweet signin-button icon-twitter_med twitter-signbtn btn-boxy" value="twitter sign in" style="float: right">
+ 
+<i></i>
+<span>with twitter</span>
+</a>
+
+</div>
+
+<div class="modal-social-follow" style="display: block;">
+<input id="modal-social-follow-signin-checkbox" type="checkbox" checked="checked">
+<span class="label-break-sml">follow <a target="_blank" href="http://twitter.com/crowdccHQ">us</a></span>
+</div>
+<div class="modal-sml-pad"></div>
+</span>
+
+<span class="ui-dialog-email-content" style="display:none;">
+<h3>Complete your account</h3>
+<div class="msg-complete-outer">
+<div class="msg-complete">by adding the best email address for us to keep in touch with you ...
+also, to protect your new crowdcc account, create a strong password.</div>
+</div>
+<div class="row">
+<div class="ecode_row"> 
+<label class="hidden" for="email_modal">Your email</label>
+<input id="email_modal" type="email" autocomplete="off" placeholder="Your email address" name="email_modal" />
+</div>
+</div>
+
+<div id="ecode_modal_msg" class="ecode_modal_msg">&nbsp;</div>
+
+<div class="pcode_row">
+<label class="hidden" for="password_modal">Your password</label>
+<input id="passcode_modal" type="password" autocomplete="off" placeholder="Your password" name="passcode_modal" />       
+</div>
+
+<div id="pcode_modal_msg" class="pcode_modal_msg">&nbsp;</div>
+<div class="modal-buttons" class="clearfix"> 
+<input class="signin-crowdcc-btn close-action send-action signin-pad" type="submit" value="Sign up" id="signin_button" name="signin_button">
+</div>
+
+<div class="modal-twitter-follow" style="display: block;">
+<label>
+<input id="modal-social-follow-complete-checkbox" type="checkbox" checked="checked">
+<span class="follow-pad">follow <a target="_blank" href="http://twitter.com/crowdccHQ">us</a></span><div class="label-break-med">on twitter</div>
+</label>
+</div>
+  
+<div class="modal-twitter-follow-button">
+  
+</div>
+</span>
+
+<span class="ui-dialog-password-content" style="display:none;">
+<h3>Reset password</h3>
+<p>Type in your email address used to sign in to crowdcc and we'll help you get your password back.</p>
+<div class="row">
+<label class="hidden" for="pcode_reset">Your Email</label>
+<input id="pcode_reset" type="email" placeholder="Your email address" name="pcode_reset">
+</div>
+
+<div id="pcode_reset_msg">&nbsp;</div>
+<div class="modal-buttons" class="clearfix">
+<div id="pcode_reset_validate_msg">&nbsp;</div>
+<input id="reset-ccc" class="close-action" type="submit" value="Reset password">
+<div class="modal-sml-pad">&nbsp;</div>
+</div>
+</span>
+
+<span class="ui-dialog-password-new" style="display:none;">
+<h3>Choose a new password</h3>
+<p>Enter your new password twice. Retype to verify your new password.</p>
+<div class="pcode_row_new">
+<label class="hidden" for="pcode_reset">Choose a password</label>
+<input id="pcode_new" type="password" placeholder="Choose a password" name="pcode_new">
+</div>
+<div class="pcode_row_new">
+<input id="pcode_retype" type="password" placeholder="Retype the password" name="pcode_retype">
+</div>
+
+<div id="pcode_new_msg">&nbsp;</div>
+<div class="modal-buttons" class="clearfix">
+<span id="pcode_new_validate_msg">&nbsp;</span> 
+<input id="new-ccc" class="close-action" type="submit" value="Renew password">
+<div class="modal-max-pad">&nbsp;</div>
+</div>  
+</span>
+
+<span class="ui-dialog-email-confirm" style="display:none;">
+<h3>Confirm your email address</h3>
+<div class="ui-dialog-spacer"></div>
+<label class="hidden" for="eshow_reset">Your email address</label>
+<input id="eshow_reset" type="email" placeholder="Your email address" name="eshow_reset" readonly>
+
+<p>Type in your password to secure sign in to crowdcc and we'll confirm this update.</p>
+
+<div class="row">
+<label class="hidden" for="eirm_retype">Type in your password</label>
+<input id="eirm_retype" type="password" placeholder="Type in your password" name="eirm_retype">
+</div>
+
+<div id="eirm_new_msg" style="visibility: hidden;">Password entered:
+<span style="color:#999999">verification required</span></div>
+<div id="eirm_new_validate_msg" style="visibility: hidden;"><span style="color:#444444">Save changes</span>
+to verify data</div> 
+
+<div class="modal-buttons" class="clearfix">
+<!-- <input id="eirm-ccc" class="button vanilla primary center" type="submit" value="Enter password"> -->
+<input id="eirm-ccc" class="close-action" type="submit" value="Enter password">
+<div class="modal-max-pad">&nbsp;</div>
+</div>
+</span>
+
+<span class="ui-dialog-welcome-content" style="display:none;">
+<h3>Welcome to crowdcc</h3>
+<p>Type in your email address used to sign in to crowdcc and we'll help you get your password back.</p>
+<div class="row">
+<label class="hidden" for="email">Your Email</label>
+<input id="email-reset" type="email" placeholder="Your email address" name="email-reset">
+</div>
+<div class="modal-buttons" class="clearfix">
+ 
+<input class="button vanilla primary center" type="submit" value="Reset password" style="float: right;">
+</div>
+
+<div class="modal-twitter-follow" style="display: block;">
+<label>
+<input id="email-modal-twitter-follow-welcome-checkbox" type="checkbox" checked="checked">
+@crowdccHQ<br>
+<span class="label-break-sml">follow on twitter</span>
+</label>
+</div>
+  
+<div class="modal-twitter-follow-button">
+  
+</div>
+</span>
+  
+<span class="ui-dialog-account-settings" style="display:none;">
+<h3>Settings <span style="font-size:12px;color:#999999"> update your details, options.</span></h3>
+
+<div class="uname_row">
+<label for="uname">Username</label>
+<input id="uname_account_settings" type="uname" placeholder="Username" name="uname_account_settings" disabled="disabled">
+</div>
+
+<div class="email_row">
+<label for="email">Update email</label>
+<input id="email_account_settings" type="email" placeholder="Email address" name="email_account_settings">
+</div>
+
+<div id="ecode_account_settings_msg">&nbsp;</div>
+
+<div class="passcode_row">
+<label for="password">Update password</label>
+<input id="passcode_account_settings" type="password" placeholder="Enter current password" name="passcode_account_settings">
+</div>
+
+<div class="passcode_row">
+<label class="hidden" for="password">Verify current password</label>
+<input id="passcode_account_settings_verify" type="password" placeholder="Verify current password" name="passcode_account_settings_verify">
+</div>
+
+<div id="pcode_account_settings_msg">&nbsp;</div>
+
+<div class="modal-buttons" class="clearfix">
+<span id="account_settings_msg">&nbsp;</span> 
+
+<input id="account-settings-save-changes" class="close-action send-action" type="submit" value="Save changes" style="float: right;">
+</div>
+</span>
+
+</div>
+</div>
+
+<a class="modal-close" data-dismiss="modal"></a>
+</section>
+
+</div>
+
+<!-- end modal info dialogs -->
+
+
+<!-- start notice message bar dialogs --> 
+
+<div class="notices notices-center" style="display:none">
+
+<ul id="notice" class="notices clearfix">
+<!-- <ul id="notice" class="notices clearfix notice-insert"> notice-insert add to insert message in between the topbar and the content * clearfix class moved -->
+
+<li class="notice-help alert actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message" style="margin-left:4px;">help!</span>
+</span>
+</li>
+
+<li class="notice-rt alert actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet retweeted.</span>
+</span>
+</li>
+
+<li class="notice-fv alert actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet favored.</span>
+</span>
+</li>
+
+<li class="notice-rtfv alert actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet retweeted and favored.</span>
+</span>
+</li>
+
+<li class="alert notice-rtfvrp actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet retweeted favored and replied to.</span>
+</span>
+</li>			
+		
+<li class="alert notice-rtfvrpcm actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet retweeted favored replied to and emailed.</span>
+</span>
+</li>
+
+<li class="alert notice-rp actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet replied to, timeline will be updated shortly.</span>
+</span>
+</li>
+
+<li class="alert notice-rm actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet replied to with media attached, timeline will be updated shortly.</span>
+</span>
+</li>
+
+<li class="alert notice-cm actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet mailed.</span>
+</span>
+</li>
+
+<li class="alert notice-st actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet tweeted, timeline will be updated shortly.</span>
+</span>
+</li>
+
+<li class="alert notice-sm actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet tweeted with media attached, timeline will be updated shortly.</span>
+</span>
+</li>
+
+<li class="alert notice-sh actionable notices-content-fixon" style="background-color: rgba(219, 57, 57, 0.9); display:none">
+<span>
+<span class="message">tweet trashed.</span>
+</span>
+</li>
+
+<li class="error notice-she actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">Woaw tweet not found ... refreshing store.</span>
+</span>
+</li>
+
+<li class="alert notice-cw actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">cc tweets trending right now.</span>
+</span>
+</li>
+
+<li class="alert notice-on actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet carbon copied.</span>
+</span>
+</li>
+
+<li class="alert notice-now actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span id="now" class="message">view new content.</span>
+</span>
+</li>
+
+<li class="alert notice-ond actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">tweet already carbon copied!</span>
+</span>
+</li>
+
+<li class="error notice-pae actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">crowdcc has been paused!</span>
+</span>
+</li>
+
+<li class="error notice-nar actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">crowdcc store limit is near!</span>
+</span>
+</li>
+
+<li class="alert notice-ino actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">your signed in, but we can't find any tweets? ... create some tweets or follow users with tweets and we'll catch up shortly ...!</span>
+</span>
+</li>
+
+<li class="alert notice-cno actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">crowdcc store is empty ...!</span>
+</span>
+</li>
+
+<li class="error notice-nae actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">Woaw, cannot find any more cc tweets in the store!</span>
+</span>
+</li>
+
+<li class="error notice-lie actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">crowdcc limit <span style="white-space:nowrap;">reached, more storage</span> <span style="white-space:nowrap;">more features &nbsp;</span>
+<a class="btn_upgrade_acc">upgrade account</a>
+</span>
+</li>
+
+<li class="error notice-api actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span id="api" class="message">Don't panic, paging older content will re-enabled shortly</span>
+</span>
+</li>
+
+<li class="error notice-cat actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">Just catching up with your request please try now</span>
+</span>
+</li>
+
+<li class="error notice-cut actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">crowdcc paging older content in this version is limited, please upgrade!</span>
+</span>
+</li>
+
+<li class="notice-mag actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">Image file is larger than 3MB, this is not supported in this version, please upgrade!</span>
+</span>
+</li>
+
+<li class="alert notice-cd actionable notices-content-fixon" style="background-color: rgba(219, 57, 57, 0.9); border-bottom-color: rgba(219, 57, 57, 0.9); display:none">
+<span>
+
+<!-- notice noticebar-close-flix in app x button -->
+
+<div id="noticebar-close-flix" class="noticebar-close-flix" style="display:none;">
+<button class="ui-dialog-noticebar-close" title="close" aria-disabled="false" role="button" style="background-color: rgba(85, 172, 238, 0.1); color: #FFFFFF">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+<span id="notice-cd" style="display:none">
+<span class="message">Are you sure you want to delete this crowdcc copy?</span>
+<a class="trash-button wiggle">yes</a>
+</span>
+</span>
+</li>
+
+<li class="alert notice-api-cape actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">Woaw, everything is a bit busy right now, please try later.</span>
+</span>
+</li>
+
+<li class="alert notice-api-rrot actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">Woaw, tweet already re-tweeted re-favoured or a protected tweet!</span>
+</span>
+</li>
+
+<li class="alert notice-api-prot actionable notices-content-fixon" style="background-color: rgba(85, 172, 238, 0.9); border-bottom-color: rgba(85, 172, 238, 0.9); display:none">
+<span>
+<span class="message">Woaw, tweet already re-tweeted re-favoured or a protected tweet!</span>
+</span>
+</li>
+   
+<li class="error notice-api-inte actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">Woaw, something has gone wrong, while we investigate, please try to re-signin.</span>
+</span>
+</li>
+
+<li class="error notice-api-page actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">Woaw, something has gone wrong, while we investigate, please try to re-signin.</span>
+</span>
+</li>
+
+<li id="error_mailinuse" class="error_mailinuse notices-content-fix" style="display:none">
+<span>
+<span class="message">We have signed you out to protect your account, please refresh browser and re-signin.</span>
+</span>
+</li>
+
+<li id="error_tamper" class="error_tamper notices-content-fix" style="display:none">
+<span>
+<span class="message">Woaw we don't know what happened? please refresh browser and sign in again.</span>
+</span>
+</li>
+
+<li id="error_network" class="error_network notices-content-fix" style="display:none">
+<span>
+<span class="message">Woaw, we cannot connect to twitter, please refresh browser and try to re-signin.</span>
+</span>
+</li>
+
+<li id="error_ucode" class="error_ucode notices-content-fix" style="display:none">
+<span>
+<span class="message">We cannot find your crowdcc account, try another? Or sign in with a social network.</span>
+</span>
+</li>
+
+<li id="error_ureg" class="error_ureg notices-content-fix" style="display:none">
+<span>
+<span class="message">twitter username is already registered with us, sign out of twitter, try another?</span>
+</span>
+</li>
+      
+<li id="error_ecode" class="error_ecode notices-content-fix" style="display:none">
+<span>
+<span class="message">We cannot find your crowdcc account, try another? Or sign in with a social network.</span>
+</span>
+</li>
+
+<li id="error_ereg" class="error error_ereg notices-content-fix" style="display:none">
+<span>
+<span class="message">Email address is already registered with us, try another? Or sign in with a social network.</span>
+</span>
+</li>
+
+<li id="error_pcode" class="error_pcode notices-content-fix" style="display:none">
+<span>
+<span class="message">We cannot find sign in details, double check your password?</span>
+<a class="btn_reset_pcode">forgotten password?</a>
+</span>
+</li>
+
+<li class="error error_pc0de actionable notices-content-fix" style="display:none">
+<span>
+<span class="message">Email link invalid or expired, reset your password?</span>
+<a class="btn_reset_pcode">reset password?</a>
+</span>
+</li>
+
+<li id="error_pc1de" class="error_pc1de notices-content-fix" style="display:none">
+<span>
+<span class="message">Invalid link or password already changed, reset your password?</span>
+<a class="btn_reset_pcode">reset password?</a>
+</span>
+</li>
+
+<li id="error_pc4de" class="error_pc4de notices-content-fix" style="display:none">
+<span>
+<span class="message">Connection lost, trying to reconnect.</span>
+</span>
+</li>
+
+<li id="error_pc5de" class="error error_pc5de actionable notices-content-float" style="display:none">
+<span class="message">
+<span id="messagetxt" class="messagetxt">Confirm your email address to access all crowdcc features.</span>
+&nbsp;<a id="up_email" class="reset_ecode">update email</a><span id="or_email" class="messageand"> or </span>
+<a id="btn_confirm_email" class="confirm_ecode btn_confirm_ecode">Send confirmation</a>
+</span>
+</span>
+</li>
+
+<li id="error_ec0de" class="error_ec0de notices-content-fix" style="display:none">
+<span>
+<span class="message">Invalid link or link expired.</span>
+</span>
+</li>
+
+<li id="error_ec1de" class="error_ec1de notices-content-fix" style="display:none">
+<span>
+<span class="message">Invalid link or already updated, please sign in to your account, and try again.</span>
+</span>
+</li>
+
+<li class="error error_ec2de actionable notices-content-fixon" style="display:none">
+<span>
+<span class="message">Email not found.</span>
+</span>
+</li>
+
+<li id="error_ec3de" class="error_ec3de notices-content-fix" style="display:none">
+<span>
+<span class="message">Account update, please re-sign into crowdcc.</span>
+</span>
+</li>
+
+<li id="psnd" class="psnd notices-content-fix" style="display:none;">
+<span>
+<span class="message">We've signed out and sent change password instructions to your current email address!</span>
+</span>
+</li>
+
+<li id="pfim" class="pfim notices-content-fix" style="display:none;">
+<span>
+<span class="message">Your crowdcc password has been updated, next time you sign in, use this new password!</span>
+</span>
+</li>
+
+<li id="error_em0n" class="error error_em0n actionable notices-content-fix" style="display:none">
+<span>
+<span class="message">Email link invalid or expired, resend email confirmation?</span>
+<a class="btn_confirm_ecode">send confirmation</a>
+</span>
+</li>
+
+<li id="error_em6n" class="error error_em6n actionable notices-content-fix" style="display:none">
+<span>
+<span class="message">Password invalid, please sign in to crowdcc to update your account!</span>
+</span>
+</li>
+
+<li id="esnd" class="esnd notices-content-fix" style="display:none;">
+<span>
+<span class="message">We've sent email confirmation instructions to the given email address!</span>
+</span>
+</li>
+
+<li id="efim" class="efim notices-content-fix" style="display:none;">
+<span>
+<span class="message">Your crowdcc email has been confirmed, next time you sign in, your account will be updated.</span>
+</span>
+</li>
+
+</ul>
+
+<!-- notice noticebar-close-fixon in app x button -->
+
+<div id="noticebar-close-fixon" class="noticebar-close-fixon" style="display:none;">
+<button class="ui-dialog-noticebar-close" title="close" aria-disabled="false" role="button" style="background-color: rgba(85, 172, 238, 0.1); color: #FFFFFF">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+<!-- notice noticebar-close-fix at topbar x button -->
+
+<div id="noticebar-close-fix" class="noticebar-close-fix" style="display:none;">
+<button class="ui-dialog-noticebar-close" title="close" aria-disabled="false" role="button" style="background-color: rgba(85, 172, 238, 0.1); color: #FFFFFF">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+<!-- notice noticebar-close-float in app x button -->
+
+<div id="noticebar-close-float" class="noticebar-close-float" style="display:none;">
+<button class="ui-dialog-noticebar-close" title="close" aria-disabled="false" role="button" style="background-color: rgba(85, 172, 238, 0.1); color: #FFFFFF; z-index: 0;">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+</div>
+
+<!-- end notice message bar dialogs --> 
+
+<!-- id="in" content feed in -->
+<div id="in" style="display: none; margin-top:50px;"></div>
+
+<!-- id="cc" content copy feed -->
+<div id="cc" style="display: none; margin-top:50px;"></div>
+
+<!-- id="cw" crowd most copied media -->
+<div id="cw" style="display: none; margin-top:50px;"></div>
+
+<!-- id="cp" crowd people registered -->
+<div id="cp" style="display: none; margin-top:50px;"></div>
+
+<!-- id="su" support * help * start default page view -->
+<div id="su" style="display: block; margin-top:0px;">
+
+<style type="text/css">
+
+.copy_only,.copyonly,.platform_icon{display:inline-block;background-repeat:no-repeat}body{color:#111;font:16px/1.4 Helvetica Neue,sans-serif}.alert-notice,.alert-notice h4,ul.sidebar_nav li a.active{color:#555459}h1,h2,h3{font-weight:300}h2{font-size:2.3rem;line-height:3rem;margin:0 0 3rem}h3{font-size:2rem;line-height:2.5rem;margin:0 0 1rem}#su .show_on_mobile{display:none}#su .section.video.splash #video_form{padding:2rem 1.5rem}.helvetica{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.lato,.lato_black,.lato_bold,.lato_regular{font-family:Lato,sans-serif}.lato{font-weight:400}.lato_black{font-weight:900}.lato_bold{font-weight:700}.lato_regular{font-weight:500}.monospace{font-family:Monaco,Menlo,Consolas,"Courier New",monospace!important}.clear-both{clear:both}.block{display:block!important}.inline-block{display:inline-block!important}.inline{display:inline!important}.align-left{text-align:left!important}.align-center{text-align:center!important}.align-right{text-align:right!important}.align_top{vertical-align:top!important}.offscreen{left:-10000px;position:absolute;top:-10000px}.page,.section.header .divider.left{left:0}.normal{font-weight:400!important}.black{font-weight:900}.bold{font-weight:700}#signin,.medium{font-weight:500}.italic{font-style:italic}.underline{text-decoration:underline}#su #signin_link,#su #signin_link:hover,.no_underline,.no_underline:hover,.sidebar_nav a:hover i{text-decoration:none}.xsml_left_margin{margin-left:2px}.sml_left_margin{margin-left:8px}.top_margin{margin-top:1rem!important}.bottom_margin{margin-bottom:1rem!important}.left_margin{margin-left:1rem!important}.hidden{display:none!important;visibility:hidden}ul.sidebar_nav{list-style-type:none;margin:0 0 1.5rem}ul.sidebar_nav li{color:#555459;font-family:Lato,sans-serif;font-size:.9rem;font-weight:700;line-height:1.5rem}.sidebar_nav i{display:inline-block;font-size:14px;padding:0 .5rem 0 0;text-align:center;width:1.5rem}ul.sidebar_nav ul{margin:0 0 0 29px}ul.sidebar_nav ul li{font-size:.9rem;line-height:1.5rem;list-style:none}.copy_only,.copyonly{-moz-box-orient:vertical;-moz-user-select:none;background-size:0 auto;float:left;font-size:0;height:0;text-indent:-9999px;text-rendering:auto;vertical-align:baseline}.alert-notice{background-color:#fbfaf8;border-color:#f2f2f5}.alert-warning{background-color:#f4e8d6;border:0;color:#e5b156;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.section.footer .column.right p.title,.section.footer h1,.section.header h1{font-family:"Shadows Into Light Two",sans-serif}.alert-warning a{color:#e5b156}.alert-warning:hover{background-color:#e5b156;color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.1)}.alert-warning:hover a{color:#fff}.fa-spin{animation:1s linear 0s normal none infinite spin}.platform_icon{height:58px;vertical-align:middle;width:54px}@media not all,only screen and (min--moz-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx){.platform_icon{background-size:100% auto}}.sky_blue{color:#439fe0!important}.sky_blue_bg{background-color:#439fe0!important}.dropbox_blue{color:#007ee5!important}.dropbox_blue_bg{background-color:#007ee5!important}.twitter_blue{color:#55acee!important}.twitter_blue_bg{background-color:#55acee!important}.warm_white{color:#fbfaf8!important}.warm_white_bg{background-color:#fbfaf8!important}.cloud_white{color:#f2f2f5!important}.cloud_white_bg{background-color:#f2f2f5!important}.container,.container_mid{margin:0 auto;position:relative;width:960px}#signin,.page{position:absolute}.column{float:left;padding:0 2rem 0 0;width:430px}.column.left{padding-top:1rem}.column.right{padding:2rem 0 2rem 2rem}.section.colored a,.section.colored a:active,.section.colored a:hover,.section.colored a:link,.section.colored a:visited{color:#fff}.page{display:none;top:0;width:100%}.page.active{display:block!important}.section.header .container{padding-bottom:2.5rem}.section.header .divider{background:#fff;bottom:0;height:23px;position:absolute;width:35%}.section.header .divider.right{right:0}.section.header h1{background:rgba(0,0,0,.25);border:4px solid rgba(255,255,255,.5);border-radius:.25rem;box-shadow:0 1px 1px rgba(0,0,0,.5);color:#fff;font-size:5rem;letter-spacing:-1px;line-height:5rem;margin:0 5rem;min-height:208px;padding:1rem 2rem 1.5rem}#signin,#signin_link{color:rgba(255,255,255,.75)}#signin{font-size:.8rem;line-height:1rem;margin:0;right:5rem;top:1rem}#signin_link{font-weight:700}#signin:hover,#signin:hover #signin_link{color:#fff}#universal-context h3,#universal-files h3{margin-top:1rem}#universal-heroku h2{font-size:2.5rem;line-height:3rem}.section.footer{background:#4d394b;position:relative}.section.footer .footer_image{background-position:center top;background-repeat:no-repeat;background-size:cover;bottom:0;left:0;margin:-10px;position:absolute;right:0;top:0}.section.footer .column.left{padding-right:0}.section.footer .column.right{padding-left:4rem}.section.footer .container{padding:5rem 0 6rem}.section.footer .column.right p.title{font-size:3rem;line-height:3.5rem;margin-top:4.5rem;max-width:360px}.section.footer .signup_info{font-size:1rem;font-weight:500;line-height:1.5rem;margin:0 auto 1rem;max-width:290px}.section.footer h1{font-size:4.5rem;line-height:5rem;margin:0 0 2.5rem}.section.footer .advance_target{bottom:2rem;cursor:pointer;left:50%;position:absolute;top:0;width:50%}.section.footer .nav.next{opacity:.5;transition:opacity .1s ease 0s}.section.footer .advance_target:hover{background:rgba(255,255,255,.2)}.section.footer.hovered .column.right p.title{text-shadow:0 0 8px rgba(255,255,255,.5)}.section.footer.hovered .nav.next{opacity:1}.section.footer .nav_text{background:rgba(0,0,0,.5);bottom:-2rem;color:rgba(255,255,255,.5);font-family:Lato,sans-serif;font-size:.9rem;font-weight:500;left:0;line-height:2rem;position:absolute;right:0;text-align:center}form input[type=text],form input[type=email],form input[type=submit]{background:#fbfaf8;border:1px solid #fff;border-radius:.25rem;box-shadow:0 1px 2px rgba(0,0,0,.5);color:#555459;font-family:Lato,sans-serif;font-size:1.1rem;height:48px;margin:.5rem 0;padding:.75rem 1rem;transition:border-color .1s ease 0s;vertical-align:bottom;width:290px}form input[type=text]:focus,form input[type=text]:hover,form input[type=email]:focus,form input[type=email]:hover{border-color:#439fe0}form input[type=submit]{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;background:#439fe0;border-color:-moz-use-text-color -moz-use-text-color #194ba3;border-image:none;border-style:none none solid;border-width:0 0 2px;box-shadow:none;color:#fff;cursor:pointer;font-weight:500;padding:.75rem 2rem!important;text-shadow:0 1px 1px rgba(0,0,0,.5);transition:background .1s ease 0s}form input[type=submit]:hover{background:#3da7f2}form input[type=submit]:active{border-bottom:1px solid #194ba3;height:47px;margin-top:9px}form :-moz-placeholder{color:#aaa}form ::-moz-placeholder{color:#aaa}.section .nav.next,.section .nav.previous{color:#fff;font-size:7rem;position:absolute}.section.header .nav.next,.section.header .nav.previous{opacity:.1;padding:3rem;top:13.5rem;transition:opacity .15s ease 0s}.section .nav.next:hover,.section .nav.previous:hover{opacity:.8;text-decoration:none}.section.header .nav.next{right:-6.5rem}.section.header .nav.previous{left:-6.5rem}.section.footer .nav.next{right:-6.5rem;top:12.5rem}.section{overflow:hidden;text-shadow:0 1px #fff}.bordered{border-bottom:1px solid #ddd}.section.colored,.section.colored li{color:#fff;text-shadow:0 1px rgba(0,0,0,.15)}.section.colored li.active{border-color:#fff}.section.colored{color:#fff!important}.section.full p{margin:0 auto 1rem;max-width:80%}.section.full h2{color:#fff;-moz-osx-font-smoothing:grayscale;margin:0 auto}.quote{font-size:1.75rem;font-weight:500;line-height:2.25rem;margin:1.5rem 0 1rem 2rem;position:relative}.source{color:#9e9ea6;margin:0 0 0 2rem}#universal_01{background-image:url(/img/copy-share.png);height:400px;margin:0 auto 20px;width:400px}#sharepic{background-image:url(/img/share-content.png);height:220px;margin:0 auto;width:550px}#su .header{left:0;position:absolute;top:0;width:100%}#su .section.splash .container{padding-top:1.3rem}#su #signin{color:#fff;font-size:.8rem;font-weight:400;line-height:1.25rem;margin:0;position:absolute;right:0;top:1rem}#su #signin_link{border:1px solid #fff;border-radius:.25rem;color:#fff;font-size:1rem;font-weight:700;line-height:3rem;padding:.5rem 1.25rem}#su #signin_link:hover{background:#fff;color:#555459!important;text-shadow:none}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:-8px}#su .section.footer a{color:#1c1c2f;font-weight:700;margin:0 .5rem;outline:0}#su .section.footer a.terms{color:#494958;font-weight:700;margin:0 .5rem;outline:0}#su .section.footer a:hover{color:#2572a4;text-decoration:underline;outline:0}#blog_link{text-align:center!important}#su .section.footer #blog_link a{color:#1c1c2f}#su .section.footer #blog_link a:hover{color:#DF4643}#su .section.footer h2{margin:0 auto 2rem;max-width:800px;text-align:center}#su .section.footer p{line-height:2rem;margin:2rem auto 0}#su .footer_logo_wrapper{text-align:center;margin-left:1.3%}#su .footer_logo_wrapper a:hover{color:#df4643!important;text-decoration:none!important}#su .section.footer .section.landing.form{background:#3d4b5b;display:block;margin:0 auto}#su .section.splash,#su .section.video.splash{background-image:linear-gradient(rgba(8,45,90,.2),rgba(8,45,90,.1)),url(/img/landing_bg_2000x1415.jpg)}#su .section.splash{background-position:center center;background-repeat:no-repeat;background-size:cover;min-height:672px;padding-bottom:2rem;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.5)}#su .section.splash h1{color:#fff;font-size:7rem;font-weight:700;margin:0;padding:10rem 0 4rem}#su .section.splash p{color:#fff;font-size:1.5rem;line-height:2.25rem}#su .section.video.splash{min-height:0;padding-bottom:0}@media not all,only screen and (min--moz-device-pixel-ratio:2),not all,not all,only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx){.retina{background-size:100% auto}}@media only screen and (max-width:1200px){h1 .logo-txt{font-family:Lato,sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0,0,0,1)}#su .footer_logo_wrapper{text-align:center;margin-left:11px}.section.footer .nav.next{font-size:6rem;right:2rem;top:3.5rem}}@media only screen and (max-width:1024px){h1 .logo-txt{font-family:Lato,sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0,0,0,1)}.section.header h1{margin:0 8rem}#signin{right:0}.section .nav.next,.section .nav.previous{font-size:6rem}.section.header .nav.next,.section.header .nav.previous{top:12rem}.section.header .nav.next{right:-3rem}.section.header .nav.previous{left:-3rem}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:0}}@media only screen and (max-width:1023px){h1 .logo-txt{font-family:Lato,sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0,0,0,1)}.container,.container_mid{width:100%}.column,.column.right{float:none;padding:0 2rem 0 0;width:100%}.narrow .container{padding:0}.narrow .column{float:left;padding-top:1rem}.narrow .column.right{float:left;padding:1rem;text-align:center}.section.full .container{padding:3rem 2rem}.section.full p{max-width:100%}.section.header{min-height:450px}.section.header h1{font-size:3.9rem;margin:0 4.5rem}#signin{right:1rem}.section .nav.next,.section .nav.previous{font-size:6rem}.section.header .nav.next,.section.header .nav.previous{font-size:4.5rem;top:12rem}.section.header .nav.next{right:-2rem}.section.header .nav.previous{left:-2rem}.section.footer .nav.next{right:2rem;top:3.5rem;display:none}.section.footer .container{padding:3rem 0 4rem}.section.footer .advance_target{left:0;top:52%;width:100%}.section.footer .column.right{margin-top:4rem;padding-left:0;text-align:center}.section.footer .column.right p{margin-top:0;max-width:100%}.section.footer .column.right p.title{margin:2rem auto 0}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:0}ul.dynamic{margin:0 0 2rem}.column.right ul.dynamic{margin-right:2rem}ul.dynamic li.active .arrow{display:none}.item_content{margin:0 auto}}@media only screen and (max-width:767px){.hide_on_mobile{display:none}.section.full .container{padding:2.5rem 1.25rem}.section.header{min-height:420px}.section.header h1{background:0 center;border:0;box-shadow:none;font-size:3rem;line-height:3.25rem;margin:0;padding:0 0 0 1rem}#signin{right:1rem;top:1rem}.section.header .nav.next,.section.header .nav.previous{top:16.5rem}.section.header .nav.next{right:-1.5rem}.section.header .nav.previous{left:-1.5rem}#universal-search .section.header h1,#wherever-you-are .section.header h1{padding-top:1rem;text-align:left}.section.footer .advance_target{bottom:60%;top:0}.signed-in .section.footer .advance_target{bottom:0}.section.footer .column.right{margin-top:1rem;padding:0 1rem 4rem}.section.footer .column.right p.title{font-size:2.25rem;line-height:2.75rem}.section.footer h1{font-size:2.5rem;line-height:3rem;margin:0 0 1.5rem}.section.footer .container{padding:2rem 0 3rem}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer{background:#fff;font-weight:300;font-size:1rem}#sharepic,#universal_01{background-size:100% auto}.column.right{padding-bottom:1rem;padding-left:0}#universal_01{height:300px;width:300px;margin:0 auto}#universal-context h3{margin-top:.7rem;text-align:center}#sharepic{background-image:url(/img/share-content.png);height:100px;margin:0 auto;width:240px}.signed-in #universal-search .section.footer h1{margin-bottom:3rem}}.container .header h1,h1 .logo-txt{padding-bottom:1rem;font-weight:900}h1 .logo-txt{font-family:Lato,sans-serif;font-size:2.5rem;letter-spacing:-2px;margin-right:10px;text-shadow:0 1px 10px rgba(0,0,0,1)}#su .section.video.splash h1,.container .header h1{letter-spacing:-1.5px;text-shadow:0 1px 10px rgba(0,0,0,.5)}h1 .icon-size{font-size:34px!important}.container .header h1{font-size:2.5rem}.section.splash h1{color:#fff;font-size:7rem;font-weight:700;margin:0;padding:10rem 0 4rem}#su .section.video.splash h1{font-size:2.5rem;font-weight:900;padding-bottom:.4rem}#su .section.video.splash p{-moz-osx-font-smoothing:grayscale;font-size:1.3rem;line-height:1.5rem;text-shadow:0 1px 4px rgba(0,0,0,.5)}#su .section.video.splash #video_thumb{cursor:pointer;height:207px;margin:1rem auto 0;width:332px}#su input[type=text],#su input[type=email],#su input[type=submit],#su textarea{background:#fff;border:0;border-radius:.15rem;color:#555459;font-family:Lato,sans-serif;font-size:1.1rem;font-weight:700;height:48px;margin:.5rem .25rem;padding:.75rem;vertical-align:bottom;width:300px}#su input[type=submit]{background:#1C1C2F;color:#fff;cursor:pointer;font-weight:400;margin-left:0;padding:15px 2rem .75rem!important;text-shadow:0 1px 2px rgba(0,0,0,.5);width:auto}#su input[type=submit]:hover{background:#3da7f2}@media only screen and (min-width:768px)and (max-width:1024px){#su .container{width:100%}#su .container_mid{width:90%}#su #signin{right:1rem}#su .section.video.splash h1{padding-top:6rem}#su .section.video.splash #video_thumb{margin-top:.5rem}#su .section.video.splash .container{padding-bottom:0}#su .footer_logo_wrapper{text-align:center;margin-left:11px}}@media only screen and (min-width:768px)and (max-width:1023px){h1 .logo-txt{font-family:Lato,sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:-10px;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0,0,0,1)}#su .container{margin-left:3.6%;width:90%}#su .container_mid{width:90%}#su .section.splash .container{padding-top:1.5rem;padding-left:.2rem}#su #love h3{max-width:85%}#su #love p{font-size:1rem;margin-bottom:2rem}#su input#company,#su input#email{padding:.75rem 0 .75rem 1rem;width:226px}#su .section.footer .container{padding:3rem .5rem}#su .section.footer h2{font-size:2rem;line-height:2.5rem;margin:1.5rem auto;max-width:630px}#su .footer_logo_wrapper{text-align:center;margin-left:1.5%}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:0}#su .section.video.splash h1{font-size:3.5rem}#su .section.video.splash p:first-of-type{margin:1rem auto;max-width:500px}}@media only screen and (max-width:767px){h1 .logo-txt{font-family:Lato,sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0,0,0,1)}#su .show_on_mobile{display:block}#su .hide_on_mobile,#su .section.splash p.tagline br{display:none}#su .container,#su .container_mid{width:90%}#su #signin{right:1rem}#su .section.splash h1{font-size:4.8rem;line-height:5rem;padding:6rem 0 1rem}#su .section.splash p.tagline{color:#fff;font-size:1.5rem;font-weight:500;line-height:2rem;margin:1rem .25rem}#su .section.landing.form p{text-align:center}#su .section.footer .section.landing.form{width:100%}#su .section.video.splash{background-image:linear-gradient(rgba(8,45,90,.2),rgba(8,45,90,.1)),url(/img/landing_bg_2000x1415.jpg)}#su .section.video.splash #signin{right:1.5rem;top:2rem}#su .section.video.splash #signin_link{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;border-color:-moz-use-text-color -moz-use-text-color #fff;border-image:none;border-radius:0;border-style:none none solid;border-width:0 0 2px;font-weight:900;line-height:1rem;padding:0}#su .section.video.splash #signin_link:active,#su .section.video.splash #signin_link:hover{background:0 center;color:#fff!important;text-decoration:none}#su .section.video.splash h1{font-size:3rem;letter-spacing:-2px;line-height:3.25rem;margin-left:6px;padding-top:3.5rem;text-align:center;text-shadow:0 1px 5px rgba(0,0,0,.5)}#su .section.video.splash p{font-size:1rem;line-height:1rem;margin:0;text-shadow:0 1px 2px rgba(0,0,0,.5)}#su .section.video.splash #video_embed{background:rgba(0,0,0,.5);border:2px solid #fff;border-radius:.25rem;margin:1rem auto 1.5rem}#su .section.video.splash #video_form{padding:2rem 1.5rem}#su .section.video.splash #video_form p{color:#fff;line-height:1.5rem;margin:0 0 1rem!important}#su .section.video.splash #video_form p.subdued{color:rgba(255,255,255,.7);font-size:1rem;font-weight:400;line-height:1.25rem;margin-top:1rem}#su .section.video.splash #form_overlay{background:rgba(68,45,87,.95);bottom:0;display:none;left:0;overflow-y:scroll;padding:3rem 1rem;position:fixed;right:0;top:0;z-index:100}#su .section.video.splash #form_overlay p{margin-top:2rem!important}#su .section.video.splash #form_overlay p.subdued{margin-top:1rem!important}#su .section.video.splash #form_overlay_cancel{border-bottom:2px solid #fff;color:#fff;font-size:1rem;font-weight:900;line-height:1rem;padding:0;position:absolute;right:1.5rem;text-decoration:none;top:2rem}#su h2{font-size:1.5rem;line-height:2rem}#su input[type=text],#su input[type=email],#su input[type=submit],#su textarea{margin:.5rem 0;padding:.75rem 1.25rem;width:100%!important}#su .section.form p{font-size:1.25rem;line-height:1.75rem}#su .footer_logo_wrapper{text-align:center;margin-left:.5%}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:0}}@media only screen and (max-width:645px){#su .section.footer{background:0 0;font-size:1rem;font-weight:300;margin-left:-16px}#su .footer_logo_wrapper{text-align:center;margin-left:1.3%}}@media only screen and (max-width:640px){#su .footer_logo_wrapper{text-align:center;margin-left:1.3%}}@media only screen and (max-width:479px){#su .show_on_mobile{display:block}#su .hide_on_mobile{display:none}#su .container,#su .container_mid{width:70%}#su .section.splash{padding-bottom:1rem}#su .section.splash .container{padding:1.5rem .5rem 0}#su .section.splash h1{font-size:3.2rem;line-height:2.5rem;padding:8rem .5rem 2.5rem;text-align:left}#su .section.splash p.tagline{font-size:1.5rem;line-height:2rem;margin:0 0 2rem .5rem;text-align:left}#su .section.landing.form{padding:.25rem .75rem}#su .section.landing.form p{font-size:1rem;padding:0 .5rem}#su .section.video.splash h1{margin-left:-.25rem}#su .section.footer .container{padding:3rem .75rem 2rem}#su .section.footer h2{font-size:1.5rem;line-height:1.8rem}#su .section.footer p{font-size:.8rem;line-height:1.5rem}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:-8px}#su .footer_logo_wrapper{text-align:center;margin-left:.5%}#su h2{font-size:1.5rem;line-height:2rem}}@media only screen and (min-device-width:320px)and (max-device-width:568px)and (orientation:landscape){#su .section.video.splash h1{font-size:2.5rem;margin-left:0}#su .section.footer{background:#fff;font-weight:300;font-size:1rem;margin-left:0}}
+
+</style>
+
+<div class="section video splash">
+<div class="container">
+<div class="header"></div>		
+<h1><div class="icon-ccc_xxlarge"><span class="logo-txt">crowdcc</span></div></h1>
+<p class="video_tagline hide_on_mobile">manage your social content, read everything, at once in <em>one</em> place, store, read later.</p>
+<p class="video_tagline show_on_mobile">read everything, all at once</p>				
+</div>
+
+<div id="video_form">
+<p class="xsml_left_margin">crowdcc is free to use.</p>
+<input id="form_overlay_btn" class="signin-tweet show_on_mobile" type="submit" value="sign in with twitter" />
+<div id="form_overlay" class="show_on_mobile">
+<div id="logo"></div>
+<a id="form_overlay_cancel">Cancel</a>
+<div class="landing form section"><a name="signup"></a>
+
+<p class="show_on_mobile sml_left_margin">let us know what you think.</p>
+<input type="submit" class="signin-tweet" value="sign in with twitter" />	
+<p class="hide_on_mobile">let us know what you think.</p>
+
+</div>
+<p class="subdued">After you sign in, we'll send you an e-mail with a link to create your team.</p>
+</div>
+<div class="hide_on_mobile">
+<div class="landing form section"><a name="signup"></a>
+<p class="show_on_mobile">let us know what you think.</p>
+<input type="submit" class="signin-tweet" value="sign in with twitter" />	
+<p class="hide_on_mobile sml_left_margin">let us know what you think.</p>
+
+</div>
+</div>				
+</div>
+
+</div>
+			
+<div class="section cloud_white_bg" id="universal-context">
+<div class="container">
+<div class="column left">
+
+<h3>Share content or copy</h3>
+<p>for reading later, delete or keep for as long as you want, as soon as you sign in you get 10cc (carbon copy) tweets you can copy and keep.  If you <span class="ccaccount">signup</span> by registering your email address with us, we double this and give you an additional 10cc, that's 20cc copy storage, for reading later, read then delete or store for as long as you want, for free.</p>
+<p>Addtional storage is avaliable for a small monthly fee (to pay for storage and development costs) , please see below ... 
+</div>
+
+</div>
+<div class="column right">
+<div id="universal_01" class="retina"></div>
+<div class="clear-both"></div>
+</div>
+</div>
+
+<div class="section sky_blue_bg full colored colored patterned" id="universal-medium">
+<div class="container_mid">
+<h2 class="align-center bottom_margin top_margin">“... this is so easy to use, it looks good and feels right, no more scrolling up and down to find interesting content,</h2>
+<div id="sharepic"></div>
+<h2 class="align-center bottom_margin top_margin">it's all there, in my timeline and I can store it for as long as I want ...”</h2>
+<p class="align-center"><strong>Glyn Thomas</strong>, founder developer, <a href="https://twitter.com/crowdccHQ" target="_blank" class="bold">crowdcc</a></p>
+</div>
+</div>
+
+<div class="section narrow hide_on_mobile" id="universal-files" style="background-color: white;">
+<div class="container">
+<div class="column left">
+
+<h3>Manage your content</h3>
+<p>your in control of what you want to keep and what you no longer want, if you need more copy space, register with us for another free 10cc (20cc free in total) and if you want a lot more space upgrade your account for a small monthly fee which pays for the storage space and allows us to fund future development.</p>
+</div>
+
+<div class="column right">
+<img src="/img/del-plus.png" />
+</div>
+</div>
+
+</div>
+<div class="clear-both"></div>
+
+<div id="header">
+<h1 style="text-align: center;">pricing guide <br><span style="font-size:15px;">per month</span></h1>
+</div>
+
+<div id="price0" style="padding: 1rem 1rem;">
+<h2 style="text-align: center;">$0 free lite<br> account</h2>
+<p style="margin-left:20px;margin-right:20px;text-align:center;">use all features without any restrictions, 10 tweet storage to start with, register with us and you can store up to 20 tweets.</p>
+<div style="text-align: center; padding: 2rem 1.5rem;">
+<input type="submit" class="signin-tweet" value="sign in for free">
+</div>
+</div>
+	
+<div id="price6" style="padding: 1rem 1rem;">
+<h2 style="text-align: center;">$6 standard<br> account</h2>
+<p style="margin-left:20px;margin-right:20px;text-align:center;">the most popular user requested additional features will be availiable for this account, store more tweets.</p>
+<div style="text-align: center; padding: 2rem 1.5rem;">	
+<input type="submit" class="signin-feedback" value="your feedback">
+</div>
+</div>
+
+<div id="price12" style="padding: 1rem 1rem;">
+<h2 style="text-align: center;">$12 professional<br> account</h2>
+<p style="margin-left:20px;margin-right:20px;text-align:center;">we are very busy planning addtional features, only availiable for professional account users, plus store and do more.</p>
+<div style="text-align: center; padding: 2rem 1.5rem;">
+<input type="submit" class="signin-feedback" value="your feedback">
+</div>
+</div>
+
+<div class="clear-both"></div>
+<div class="section footer" style="clear: both;">	
+<div class="container">
+<div class="footer_logo_wrapper">
+<a href="http://crowdcchq.com">						
+<div class="icon-ccc_xxxlarge"></div>
+</a>
+</div>
+		
+<h2 class="align-center">we love crowdcc<br> we want to build it, so you'll love it too.</h2>		
+<p class="align-center"><a href="http://unbios.com" style="font-weight:400;" target="_blank">made by unbios</a></p>
+
+<div id="blog_link"><a href="http://crowdcchq.com" target="_blank">our blog</a></div>
+
+<p class="footer_links align-center">
+<a href="help/contact">contact us</a>
+<a href="http://twitter.com/crowdccHQ" target="_blank">@crowdcchq</a>
+<a href="mailto:press@crowdcc.com">press</a>	
+
+<br />
+
+<a class="terms" href="terms/service" >terms</a>
+<a class="terms" href="terms/privacy" >privacy</a>
+<a class="terms" href="terms/cookies" >cookies</a>
+<a class="terms" href="terms/use" >use</a>
+
+</p>
+</div>
+</div>											
+<div id="video_overlay"></div>
+					
+</div>
+
+<!--  need to display block bottom-pad when user has signed in! --> 
+<div id="bottom-pad" style='display:none; float:left; padding-top: 1%; padding-bottom: 2%; width:100%; color:#F5F8FA;'>padding</div>
+        
+<div id="sdn" class="mre">
+<span style="display:none;" class="sdn_wait">
+<img width="22" height="22" alt="loading" src="img/spinner-grey-40-22x22.gif"></span>
+<span class="sdn_more icon-play_down"></span>
+</div>
+
+<div id="sdn_cc" class="mre mredrk">
+<span style="display:none;" class="sdn_cc_wait">
+<img width="22" height="22" alt="loading" src="img/spinner-wht-40-22x22.gif"></span>
+<span class="sdn_cc_more icon-play_down"></span>
+</div>
+
+<div id="sdn_cw" class="mre">
+<span style="display:none;" class="sdn_cw_wait">
+<img width="22" height="22" alt="loading" src="img/spinner-grey-40-22x22.gif"></span>
+<span class="sdn_cw_more icon-play_down"></span>
+</div>
+
+<canvas id="reply-img-place-snd" width="50" height="50" style="position: absolute !important;top: -9999px !important; left: -9999px !important;"></canvas>
+
+</body>
+
+
+<!-- warning, do not touch anything below this line, thanks -->
+
+<script type='text/javascript' id='verify'>
+
+  window._verifyme = { '_ccc': <?php echo json_encode($output); ?> };
+  window._ccode = { 'ceode': <?php echo json_encode($ceode); ?> };
+  window._cctokenset = { '_ccc': "", 'ecode': <?php echo json_encode($ccc_token); ?> , 'emsg': <?php echo json_encode($ccc_msg); ?>, 'pcode': "" };
+  
+</script>
+
+<script type="text/javascript" src="/js/rsa_x.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/signin.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/ccc.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/store.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/ccwatch.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/twtexibinjax.js?v=1.00.00"></script>
+
+
+</html>

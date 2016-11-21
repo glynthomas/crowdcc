@@ -1,0 +1,17 @@
+css.change.log : last update : 11th Nov 2015
+
+file : modmen.min.css
+
+why  : fixed position requires top: 0 for chrome and safari 
+
+line : 534
+
+old  :
+
+.notices-content-fixon {left: 0; margin-bottom: 5px; margin-top: 64px; position: fixed; right: 0; width: 100%;}
+.noticebar-close-fixon {margin-right: 7px; margin-top: 58px; position: fixed; right: 0; z-index: 101;}
+
+new  :
+
+.notices-content-fixon {left:0; margin-bottom:5px; margin-top:46px; position: fixed; right:0; top:0; width:100%;}
+.noticebar-close-fixon {margin-right: 7px; margin-top: 55px; position: fixed; right: 0; top: 0; z-index:101}

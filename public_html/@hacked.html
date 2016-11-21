@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>crowdcc: help center</title>
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >
+
+<link href="css/plantical.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/fonticon.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+<link href="css/calendar.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+<link href="css/hacked.min.css?v=1.00.00" rel="stylesheet" type="text/css" />
+
+</head>
+<body spellcheck="false">
+
+<div id="topbar" class="topbar" style="z-index:4;">
+
+<div id="banners" class="js-banners"> </div>  
+<div class="global-nav">
+<div class="container">
+    
+<div class="ccc-spinner"></div>
+<div role="navigation" style="display: inline-block">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+
+<div id="sign" style="display:block;">
+<div class="signon account" data-global-action="account" style="display: block;">
+<span class="signon icon icon-user icon--large icon-nib-right"></span>
+<div id="top-loader" style="display: none;">
+<img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" />
+</div>
+
+<span id="signon" class="signon textin">sign in</span>
+
+</div>
+<div id="sigfrm" class="sigfrm" style="height:104px; display:none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display:none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr"> 
+<a class="signin-tweet account-summary"> 
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image">
+<div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div>
+</div>
+<div class="signin-tweet withtt">with twitter</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr"> 
+<a class="signin-menu account-summary"> 
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image">
+<div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div>
+</div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li>
+<div id="signin-content" class="signin-content" style="display:none;">
+<div class="ecode_row">
+<input id="email" class="email" type="text" placeholder="email or username" value="" autocomplete="on" value="" name="email" />
+</div>
+<div id="ecode_msg">&nbsp;</div>
+<div class="pcode_row">
+<input id="passcode" class="passcode" type="password" placeholder="password" autocomplete="off" name="passcode" />
+</div>
+<div id="pcode_msg">&nbsp;</div>
+<div class="radio_row_1">
+<input id="signin_radio_1" class="signin_radio" name="signin_radio" type="radio" value="new_usr" autocomplete="off"/>
+<label for="signin_radio_1" class="sign_radio" style="cursor: pointer;">i am new to crowdcc</label>
+</div>
+<div class="radio_row_2">
+<input id="signin_radio_2" class="signin_radio" name="signin_radio" type="radio" value="cur_usr" checked="checked" autocomplete="off"/>
+<label for="signin_radio_2" class="sign_radio" style="cursor: pointer;">yes i have a password</label>
+</div>                
+<div class="submit-actions">                  
+<input class="signin-crowdcc-btn sign-btn btn" name="signin_button" type="submit" value="sign in" >                  
+</div> 
+</div>
+</li> 
+</ul>
+</nav>
+</div>
+</div>
+</div> 
+
+
+<div id="acc" style="display:none;">
+<div id="loading" style="display: none;"><img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" /></div>
+<div class="me account" data-global-action="account" style="display: block;">
+<span class="me icon icon-user icon--large icon-nib-right"></span>
+<span id="me" class="me textin">me</span>
+</div>
+<div id="accfrm" style="display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+
+<div id="account" style="display:none;">
+<nav>
+<ul>
+<li id="acc-usr" data-name="acc-usr"> 
+<a class="account-summary"> 
+<div class="account-group js-mini-current-user" data-screen-name="glynthom" data-user-id="295131454">
+<div class="fromuser_table clearfix">
+
+<div id="fromuser_id" class="fromuser_table_row">
+<div class="image">
+<img class="avatar-menu size32" src="http://pbs.twimg.com/profile_images/440428562546298880/7bGYRdMN_normal.png">
+</div>
+<div class="fromuser"></div>
+<div class="fromuser_table_row">
+<div class="fromuser_profile"></div>
+</div>
+</div>
+
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="space-left" data-name="space-left">
+<a id="account-space" class="account-space" data-nav="account-space">space : 10cc</a>
+</li>
+<li id="acc-status">
+<a id="account-signup" class="signup-ccc" data-nav="upgrade-account" style="display:none;">signup to crowdcc</a>
+<a id="account-upgrade" data-nav="upgrade-account" style="display:none;">upgrade</a>
+</li>
+<li id="divide-two" class="dropdown-divider" style="display:none;"></li>
+<li id="acc-settings">
+<a id="account-settings" class="js-keyboard-shortcut-trigger" data-nav="shortcuts" style="display:none;">settings</a>
+</li>
+<li id="divide-three" class="dropdown-divider"></li>
+<li id="acc-help">
+<a id="account-help" class="js-nav" data-nav="account-help">help</a>
+</li>
+<li id="signout-btn">
+<a id="account-signout" class="signout-button" data-nav="signout" >sign out</a>
+</li>
+</ul>
+</nav>
+<div>
+</div>
+</div>
+</div> 
+
+
+</li>
+</ul>
+</div>
+
+<div class="ccc-icon-topbar" style="margin-right:-68px;">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">
+  
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #1B3662"></div>
+     
+</div>
+</div>
+</div>
+
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions" class="nav js-global-actions">
+<li class="create" data-global-action="create">
+<span class="create icon icon-quill icon--large icon-nibble-right"></span>
+<span class="create text">create</span>
+</li>
+<li id="global-nav-home" class="home active" data-global-action="home">
+</li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+
+<span alt="timeline">
+<span class="instore icon icon-left icon-play_left icon--large"></span>
+</span>
+
+<span alt="carbon">
+<span class="ccstore icon icon-right icon-play_right icon--large"></span>
+</span>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="ui-dialog-position">
+<div class="ui-dialog ui-dialog-center" tabindex="-1" role="dialog" aria-describedby="modal-email" aria-labelledby="ui-id-1">
+
+<div class="ui-dialog-titlebar">
+<span id="ui-id-1" class="ui-dialog-title"> </span>
+<button class="ui-dialog-titlebar-close ui-button" aria-disabled="false" role="button">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="notices notices-center" style="position: fixed; margin-top:5px; z-index: 101; display:block">
+<ul class="notices clearfix">
+
+<li id="error_icu" class="alert error_icc">
+<span>
+<span id="error_icu_msg" class="message">crowdcc may be running in another browser window, please refresh or close this window.</span>
+</span>
+</li>
+
+<li id="hacked_icu" class="alert hacked_icc">
+<span>
+<span id="hacked_icu_msg" class="message">crowdcc: help signing in to your account.</span>
+</span>
+</li>
+</ul>
+
+
+<div class="noticebar-close">
+<button class="ui-hacked-noticebar-close" aria-disabled="false" role="button">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+
+</div>
+
+<div class="pad-dwn"></div>
+
+<div class="ccmid" style="display:none;">
+  <object width="100%" height="100%" type="image/svg+xml" class="ccsvg" data="img/svg/ccc_logo_wht_32x32.svg"> </object>
+</div>
+
+<div id="hacked" style="display:none;">
+
+<section id="gaz-content" class="video splash">
+
+<div class="container_hack">
+
+<form class="form-horizontal help-form" id="signin_form" novalidate>
+
+<h2><div class="head_pad">we are here to help, please don't panic!</div></h2>
+  
+<input id="authenticity_token" name="authenticity_token" type="hidden" value="ultD5FGzuit3sK4IfugwtGEfPjIdx4S6mWZYyBGplnw=" />
+
+<div id="red" style="display:block;">          
+          
+<div class="cmail-or section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content left_pad">
+            
+crowdcc / twitter username @
+            
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<input id="user" class="input-medium screen-name-validate serialize-me required-validate" type="text" maxlength="20">
+<div id="user_msg" class="user_msg">&nbsp;</div>
+<span class="help-block"><p>this is the twitter account we'll use to contact you enter your twitter account.</span>
+<span class="help-inline error-template screen-name-validate-error" style="display: none;"> Only use letters, numbers and '_'. </span>
+</div>
+</div>
+</div>
+ 
+<div class="cmail-ok section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content left_pad">
+
+crowdcc registered email
+          
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+            
+<input id="cmail" type="text" autocomplete="on" name="cmail">
+<div id="cmail_msg" class="cmail_msg">&nbsp;</div>
+<span class="help-block"><p>this is the email we'll use to contact you, enter your crowdcc registered email address.</span>
+</div>
+</div>
+      
+</div>
+
+<div class="locked-ok section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content">
+
+is your crowdcc account locked ?
+          
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+
+<label class="radio">
+<input id="access_no" class=" radio-selection-validate" type="radio" value="access_no" name="access_answers"> No
+</label>
+
+<label class="radio">
+<input id="access_yes" class=" radio-selection-validate" type="radio" value="access_yes" name="access_answers"> Yes
+</label>
+          
+<div id="account_msg" class="account_msg">&nbsp;</div>
+</div>
+</div>
+</div>
+
+<div class="last-ok section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content left_pad_sml">
+            
+last signin: day/month/year
+            
+</div>
+</div>
+
+<div class="col span_1_of_2">
+<div class="right_content">
+<div style="position:relative;">
+<input id="last" type="text" />      
+<div id="ccontainer"></div>
+<div id="last_msg" class="last_msg">&nbsp;</div>
+</div>
+<span class="error-template required-validate-error help-inline" style="display: none;"> required field. </span>
+  <span class="help-block"><p>when did you last sign in to your account?<br> your best guess is okay.</span>
+              
+</div>
+</div>
+</div>
+
+<div class="cmail-er section_hack group" >
+<div class="col span_1_of_2">
+<div class="left_content left_pad">
+            
+anything else? (optional)
+            
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<span class="help-block">
+   please send a twitter direct message to us
+   at <a href="https://twitter.com/crowdccHQ" target="_blank">@crowdccHQ</a> with any other information,
+   do not include private information
+   (address, home phone) in this
+   request <strong>never</strong> include
+   your password.
+</span>
+</div>
+</div>
+</div>
+
+<div class="cmail-er section_hack group" >
+<div class="col span_1_of_2">
+<div class="left_content left_pad">  
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<div class="lookup_usr btn primary-btn">Submit</div>
+<span id="submit_loading" class="help-loading init-hide" style="display:none">submitting...</span><p>
+</p>
+</div>
+</div>
+</div>
+
+<!-- account instructions footer -->
+<p style="margin-top:30px;">
+
+</div>
+
+<div id="redready" style="display:none;">
+
+<div class="end_message">crowdcc: account recovery instructions</div>
+
+<p style="margin:1em 1em;">Please read these instructions carefully, shortly you should receive an email (please check your spam folder) and a twitter direct message to your crowdcc registered twitter and email accounts, each message contains a digital key, each key will be required to recover your crowdcc account, as an example, the email key and the twitter digital key will look a bit like the keys copied and pasted into the boxes on this page.<br><br>When you receive both your keys press the <span class="btn" style="margin-top:-5px;">Next</span> button, then, just like in this example, copy and paste the email key into the email key text box, and the twitter key into the twitter key text box, if any errors are detected (the keys are not in the correct order or are incorrectly copied and pasted), to protect your account, you may need to re-start this account recovery process.</p>
+
+<!-- <div class="cmail-or section_hack group head_eat"> -->
+<div class="cmail-or section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content left_pad">
+            
+crowdcc email key:
+            
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content" contenteditable="false">
+<textarea id="ekey_display" name="ekey_display" maxlength="42" readonly="readonly" >
+a;;twefzzhbtaIcV:Gavbpck:EcA:Mc9:nbBc7:0cm</textarea>
+<div id="ekey_display_msg" class="ekey_display_msg">&nbsp;</div>
+<span class="help-block"><p>this is the email digital key sent to your registered address.</span>
+<span class="help-inline error-template screen-name-validate-error" style="display: none;"> Only use letters, numbers and '_'. </span>
+</div>
+</div>
+</div>
+
+<div class="cmail-or section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content left_pad">
+            
+crowdcc twitter key:
+            
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content" contenteditable="false">
+<textarea id="tkey_display" name="ekey_display" maxlength="42" readonly="readonly" >
+cw!atbgc0cGcHbl:9:F:W:o:Ya:cfao:WaTbCcucxa
+</textarea>
+<div id="ekey_display_msg" class="ekey_display_msg">&nbsp;</div>
+<span class="help-block"><p>this is the twitter digital key sent to your registered account.</span>
+<span class="help-inline error-template screen-name-validate-error" style="display: none;"> Only use letters, numbers and '_'. </span>
+</div>
+</div>
+</div>
+        
+<div class="cmail-er section_hack group" >
+<div class="col span_1_of_2">
+<div class="left_content left_pad">  
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<div class="ready_usr btn primary-btn">Next</div>
+<span id="submit_loading" class="help-loading init-hide" style="display:none">submitting...</span><p>
+</p>
+</div>
+</div>
+</div>
+
+<!-- account instructions footer -->
+<p style="margin-top:30px;">
+
+</div>
+  
+<div id="amber" style="display:none;">
+
+<div class="end_message">crowdcc: account recovery</div>
+
+<p style="margin: 1.1em 1.1em 1em; line-height: 1.8;">Carefully copy and paste the digital email and twitter keys into the text input boxes below, do not edit or alter any part of the keys, as this may lock your account, when both keys have been pasted into their input text areas, choose the <span class="btn" style="margin-top: -5px;">Submit</span> button below when you are ready to continue.</p>
+
+<div class="cmail-or section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content left_pad">
+            
+crowdcc email key:
+            
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<textarea id="ekey" name="ekey" maxlength="42" contenteditable="true" ></textarea>
+<div id="ekey_msg" class="ekey_msg">&nbsp;</div>
+<span class="help-block"><p>this is the email digital key sent to your registered address.</span>
+<span class="help-inline error-template screen-name-validate-error" style="display: none;"> Only use letters, numbers and '_'. </span>
+</div>
+</div>
+</div>
+ 
+<div class="cmail-ok section_hack group">
+<div class="col span_1_of_2">
+<div class="left_content">
+
+crowdcc twitter key:
+          
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<textarea id="tkey" name="tkey" maxlength="42" contenteditable="true" ></textarea>
+<div id="tkey_msg" class="tkey_msg">&nbsp;</div>
+<span class="help-block"><p>this is the twitter digital key sent to your registered account.</span>
+</div>
+</div>
+      
+</div>
+
+<div class="cmail-er section_hack group" >
+<div class="col span_1_of_2">
+<div class="left_content left_pad">  
+</div>
+</div>
+<div class="col span_1_of_2">
+<div class="right_content">
+<div class="confirm_usr btn primary-btn">Submit</div>
+            
+<span id="submit_loading" class="help-loading init-hide" style="display:none">submitting...</span><p>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- account instructions footer -->
+<p style="margin-top:30px;">
+
+<div id="green" style="display:none;">
+
+<div class="end_message">crowdcc: account recovered</div>
+
+<p style="margin:1.1em;">Your account has been recovered, and we have re-set the password to a random mixture of letters and numbers in order to protect your account, your security it important to us, you will need to reset your password by selecting you have forgotten your password, when you create a new password, please protect your data and your security by choosing a non guessable password which you do not share with anyone else. Press the <span class="btn" style="margin-top: -5px">Close</span> button below when you are ready to access your account, follow the forgotten password proceedure which should send password reset instructions to your registered crowdcc email address.</p>
+
+<div class="green_giant">
+<div class="complete_usr btn primary-btn">Close</div>
+</div>
+           
+</div>
+</div>
+
+<!-- account instructions footer -->
+<p style="margin-top:30px;">
+
+</div>
+
+</div>
+
+</form>
+</div>
+</section>
+</div>
+
+</div>
+
+<!-- default * style * start page view -->
+<style>
+
+body{background-image:linear-gradient(rgba(8,45,90,.2),rgba(8,45,90,.1)),url(/img/landing_bg_2000x1415.jpg);min-height:0}.create,.create:hover,.icon-play_left,.icon-play_left:hover,.icon-play_right,.icon-play_right:hover,.signon,.signon:hover{color:#DFDFDF!important}
+
+</style>
+
+<!-- id="su" support * help * end page view -->
+<div id="su" style="display: none; margin-top:0px;">
+
+<style type="text/css">
+
+body{color:#111;font:16px/1.4 Helvetica Neue,sans-serif}h1,h2,h3{font-weight:300}h2{font-size:2.3rem;line-height:3rem;margin:0 0 3rem}h3{font-size:2rem;line-height:2.5rem;margin:0 0 1rem}#su .show_on_mobile{display:none}.container{margin:0 auto;position:relative;width:960px}#su .section.video.splash #video_form{padding:2rem 1.5rem}.helvetica{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.lato{font-family:"Lato",sans-serif;font-weight:400}.lato_black{font-family:"Lato",sans-serif;font-weight:900}.lato_bold{font-family:"Lato",sans-serif;font-weight:700}.lato_regular{font-family:"Lato",sans-serif;font-weight:500}.monospace{font-family:"Monaco","Menlo","Consolas","Courier New",monospace !important}.print_only,.print_only_inline{display:none}.float-left{float:left !important}.float-right{float:right !important}.clear-left{clear:left}.clear-right{clear:right}.clear-both{clear:both}.position-relative{position:relative}.position-absolute{position:absolute}.block{display:block !important}.inline-block{display:inline-block !important}.inline{display:inline !important}.align-left{text-align:left !important}.align-center{text-align:center !important}.align-right{text-align:right !important}.align_top{vertical-align:top !important}.align_middle{vertical-align:middle !important}.align_bottom{vertical-align:bottom !important}.offscreen{left:-10000px;position:absolute;top:-10000px}.normal{font-weight:normal !important}.black{font-weight:900}.bold{font-weight:700}.medium{font-weight:500}.italic{font-style:italic}.underline{text-decoration:underline}.no_underline,.no_underline:hover{text-decoration:none}.full_width{max-width:100% !important;width:100% !important}.half_width{margin-left:auto;margin-right:auto;max-width:50% !important;width:50% !important}.no_min_width{min-width:0 !important}.no_min_height{min-height:0 !important}.auto_width{width:auto !important}.full-height{overflow-y:auto}.cursor_pointer{cursor:pointer}.tiny{font-size:0.7rem}.centered{text-align:center}.mini{color:#666;font-size:0.8rem;line-height:1.2rem}a.mini,a.mini:link,a.mini:visited{color:#2a80b9}a.mini:hover,a.mini:active{color:#439fe0}.no_margin{margin:0 !important}.no_left_margin{margin-left:0 !important}.no_right_margin{margin-right:0 !important}.no_top_margin{margin-top:0 !important}.no_bottom_margin{margin-bottom:0 !important}.small_top_margin{margin-top:0.5rem !important}.small_bottom_margin{margin-bottom:0.5rem !important}.small_left_margin{margin-left:0.5rem !important}.small_right_margin{margin-right:0.5rem !important}.tiny_top_margin{margin-top:0.1rem !important}.xsml_left_margin{margin-left:2px}.sml_left_margin{margin-left:8px}.tiny_left_margin{margin-left:0.1rem !important}.tiny_right_margin{margin-right:0.1rem !important}.tiny_bottom_margin{margin-bottom:0.1rem !important}.top_margin{margin-top:1rem !important}.bottom_margin{margin-bottom:1rem !important}.left_margin{margin-left:1rem !important}.right_margin{margin-right:1rem !important}.large_top_margin{margin-top:2rem !important}.large_bottom_margin{margin-bottom:2rem !important}.large_left_margin{margin-left:2rem !important}.large_right_margin{margin-right:2rem !important}.margin_auto{margin:auto}.no_padding{padding:0 !important}.no_top_padding{padding-top:0 !important}.no_bottom_padding{padding-bottom:0 !important}.no_left_padding{padding-left:0 !important}.no_right_padding{padding-right:0 !important}.small_padding{padding:0.5rem !important}.normal_padding{padding:1rem !important}.large_padding{padding:2rem !important}.top_padding{padding-top:1rem !important}.bottom_padding{padding-bottom:1rem !important}.left_padding{padding-left:1rem !important}.right_padding{padding-right:1rem !important}.small_top_padding{padding-top:0.5rem !important}.small_bottom_padding{padding-bottom:0.5rem !important}.small_left_padding{padding-left:0.5rem !important}.small_right_padding{padding-right:0.5rem !important}.large_top_padding{padding-top:2rem !important}.large_bottom_padding{padding-bottom:2rem !important}.large_left_padding{padding-left:2rem !important}.large_right_padding{padding-right:2rem !important}.lowercase{text-transform:lowercase}.uppercase{text-transform:uppercase}.capitalize{text-transform:capitalize}.break_word{word-wrap:break-word}.no_wrap{white-space:nowrap}.code_wrap{white-space:pre;word-wrap:break-word}.hidden{display:none !important;visibility:hidden}ul.sidebar_nav{list-style-type:none;margin:0 0 1.5rem}ul.sidebar_nav li{color:#555459;font-family:"Lato",sans-serif;font-size:0.9rem;font-weight:bold;line-height:1.5rem}ul.sidebar_nav li a.active{color:#555459}.sidebar_nav i{display:inline-block;font-size:14px;padding:0 0.5rem 0 0;text-align:center;width:1.5rem}.sidebar_nav a:hover i{text-decoration:none}ul.sidebar_nav ul{margin:0 0 0 29px}ul.sidebar_nav ul li{font-size:0.9rem;line-height:1.5rem;list-style:none outside none}.copy_only,.copyonly{-moz-box-orient:vertical;-moz-user-select:none;background-repeat:no-repeat;background-size:0 auto;display:inline-block;float:left;font-size:0;height:0;text-indent:-9999px;text-rendering:auto;vertical-align:baseline}img.grayscale{}.alert-notice{background-color:#fbfaf8;border-color:#f2f2f5;color:#555459}.alert-notice h4{color:#555459}.alert-warning{background-color:#f4e8d6;border:0 none;color:#e5b156;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.alert-warning a{color:#e5b156}.alert-warning:hover{background-color:#e5b156;color:white;text-shadow:0 1px 0 rgba(0, 0, 0, 0.1)}.alert-warning:hover a{color:white}.fa-spin{animation:1s linear 0s normal none infinite spin}body.plaid{}.platform_icon{background-repeat:no-repeat;display:inline-block;height:58px;vertical-align:middle;width:54px}@media not all,only screen and (min--moz-device-pixel-ratio: 2),not all,not all,only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx){.platform_icon{background-size:100% auto}}.restricted_header{color:#9e9ea6}.inactive{background-repeat:repeat}.inactive .member_image{opacity:0.25}.null_transform{}.helvetica{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.lato{font-family:"Lato",sans-serif;font-weight:400}.lato_black{font-family:"Lato",sans-serif;font-weight:900}.lato_bold{font-family:"Lato",sans-serif;font-weight:700}.lato_regular{font-family:"Lato",sans-serif;font-weight:500}.monospace{font-family:"Monaco","Menlo","Consolas","Courier New",monospace !important}.havana_blue{color:#2a80b9 !important}.havana_blue_bg{background-color:#2a80b9 !important}.pale_blue{color:#f1f7fa !important}.pale_blue_bg{background-color:#f1f7fa !important}.candy_red{color:#eb4d5c !important}.candy_red_bg{background-color:#eb4d5c !important}.indifferent_grey{color:#555459 !important}.indifferent_grey_bg{background-color:#555459 !important}.severe_grey{color:#3d3c40 !important}.severe_grey_bg{background-color:#3d3c40 !important}.dull_grey{color:#8b898f !important}.dull_grey_bg{background-color:#8b898f !important}.subtle_silver{color:#9e9ea6 !important}.subtle_silver_bg{background-color:#9e9ea6 !important}.cloud_silver{color:#babbbf !important}.cloud_silver_bg{background-color:#babbbf !important}.sky_blue{color:#439fe0 !important}.sky_blue_bg{background-color:#439fe0 !important}.slate_blue{color:#3d4b5b !important}.slate_blue_bg{background-color:#3d4b5b !important}.moscow_red{color:#d00000 !important}.moscow_red_bg{background-color:#d00000 !important}.moscow_red_dark{color:#870000 !important}.moscow_red_dark_bg{background-color:#870000 !important}.mustard_yellow{color:#daa038 !important}.mustard_yellow_bg{background-color:#daa038 !important}.kelly_green{color:#36a64f !important}.kelly_green_dark{color:#257337 !important}.kelly_green_bg{background-color:#36a64f !important}.seafoam_green{color:#2ab27b !important}.seafoam_green_bg{background-color:#2ab27b !important}.star_yellow{color:#fc0 !important}.star_yellow_bg{background-color:#fc0 !important}.highlight_yellow_bg{background-color:#fffce0 !important}.dropbox_blue{color:#007ee5 !important}.dropbox_blue_bg{background-color:#007ee5 !important}.twitter_blue{color:#55acee !important}.twitter_blue_bg{background-color:#55acee !important}.warm_white{color:#fbfaf8 !important}.warm_white_bg{background-color:#fbfaf8 !important}.cloud_white{color:#f2f2f5 !important}.cloud_white_bg{background-color:#f2f2f5 !important}.container{margin:0 auto;position:relative;width:960px}.container_mid{margin:0 auto;position:relative;width:960px}.column{float:left;padding:0 2rem 0 0;width:430px}.column.left{padding-top:1rem}.column.right{padding:2rem 0 2rem 2rem}.section.colored a,.section.colored a:link,.section.colored a:visited,.section.colored a:hover,.section.colored a:active{color:white}.page{display:none;left:0;position:absolute;top:0;width:100%}.page.active{display:block !important}.section.header .container{padding-bottom:2.5rem}.section.header .divider{background:none repeat scroll 0 0 white;bottom:0;height:23px;position:absolute;width:35%}.section.header .divider.left{left:0}.section.header .divider.right{right:0}.section.header h1{background:none repeat scroll 0 0 rgba(0, 0, 0, 0.25);border:4px solid rgba(255, 255, 255, 0.5);border-radius:0.25rem;box-shadow:0 1px 1px rgba(0, 0, 0, 0.5);color:white;font-family:"Shadows Into Light Two",sans-serif;font-size:5rem;letter-spacing:-1px;line-height:5rem;margin:0 5rem;min-height:208px;padding:1rem 2rem 1.5rem}#signin{color:rgba(255, 255, 255, 0.75);font-size:0.8rem;font-weight:500;line-height:1rem;margin:0;position:absolute;right:5rem;top:1rem}#signin_link{color:rgba(255, 255, 255, 0.75);font-weight:700}#signin:hover,#signin:hover #signin_link{color:#fff}#universal-context h3{margin-top:1rem}#universal-files h3{margin-top:1rem}#universal-heroku h2{font-size:2.5rem;line-height:3rem}.section.footer{background:none repeat scroll 0 0 #4d394b;position:relative}.section.footer .footer_image{background-position:center top;background-repeat:no-repeat;background-size:cover;bottom:0;left:0;margin:-10px;position:absolute;right:0;top:0}.section.footer .column.left{padding-right:0}.section.footer .column.right{padding-left:4rem}.section.footer .container{padding:5rem 0 6rem}.section.footer .column.right p.title{font-family:"Shadows Into Light Two",sans-serif;font-size:3rem;line-height:3.5rem;margin-top:4.5rem;max-width:360px}.section.footer .signup_info{font-size:1rem;font-weight:500;line-height:1.5rem;margin:0 auto 1rem;max-width:290px}.section.footer h1{font-family:"Shadows Into Light Two",sans-serif;font-size:4.5rem;line-height:5rem;margin:0 0 2.5rem}.section.footer .advance_target{bottom:2rem;cursor:pointer;left:50%;position:absolute;top:0;width:50%}.section.footer .nav.next{opacity:0.5;transition:opacity 0.1s ease 0s}.section.footer .advance_target:hover{background:none repeat scroll 0 0 rgba(255, 255, 255, 0.2)}.section.footer.hovered .column.right p.title{text-shadow:0 0 8px rgba(255, 255, 255, 0.5)}.section.footer.hovered .nav.next{opacity:1}.section.footer .nav_text{background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);bottom:-2rem;color:rgba(255, 255, 255, 0.5);font-family:"Lato",sans-serif;font-size:0.9rem;font-weight:500;left:0;line-height:2rem;position:absolute;right:0;text-align:center}.section .nav.next,.section .nav.previous{color:white;font-size:7rem;position:absolute}.section.header .nav.next,.section.header .nav.previous{opacity:0.1;padding:3rem;top:13.5rem;transition:opacity 0.15s ease 0s}.section .nav.next:hover,.section .nav.previous:hover{opacity:0.8;text-decoration:none}.section.header .nav.next{right:-6.5rem}.section.header .nav.previous{left:-6.5rem}.section.footer .nav.next{right:-6.5rem;top:12.5rem}.section{overflow:hidden;text-shadow:0 1px #fff}.bordered{border-bottom:1px solid #ddd}.section.colored,.section.colored li{color:white;text-shadow:0 1px rgba(0, 0, 0, 0.15)}.section.colored li.active{border-color:white}.section.colored{color:white !important}.section.full p{margin:0 auto 1rem;max-width:80%}.section.full h2{color:white;-moz-osx-font-smoothing:grayscale;margin:0 auto}.quote{font-size:1.75rem;font-weight:500;line-height:2.25rem;margin:1.5rem 0 1rem 2rem;position:relative}.source{color:#9e9ea6;margin:0 0 0 2rem}#universal_01{background-image:url("/img/copy-share.png");height:400px;margin:0 auto 20px;width:400px}#sharepic{background-image:url("/img/share-content.png");height:220px;margin:0 auto;width:550px}@media not all,only screen and (min--moz-device-pixel-ratio: 2),not all,not all,only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx){.retina{background-size:100% auto}}@media not all,only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px),not all,not all,only screen and (min-resolution: 192dpi) and (max-width: 1024px),only screen and (min-resolution: 2dppx) and (max-width: 1024px){}@media only screen and (max-width: 1680px){}@media only screen and (max-width: 640px){#su .footer_logo_wrapper{text-align:center;margin-left:11px}}@media only screen and (max-width: 1200px){h1 .logo-txt{font-family:"Lato",sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 1)}#su .footer_logo_wrapper{text-align:center;margin-left:11px}.section.footer .nav.next{font-size:6rem;right:2rem;top:3.5rem}}@media only screen and (max-width: 1024px){h1 .logo-txt{font-family:"Lato",sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 1)}.section.header h1{margin:0 8rem}#signin{right:0}.section .nav.next,.section .nav.previous{font-size:6rem}.section.header .nav.next,.section.header .nav.previous{top:12rem}.section.header .nav.next{right:-3rem}.section.header .nav.previous{left:-3rem}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:0}}@media only screen and (max-width: 1023px){h1 .logo-txt{font-family:"Lato",sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 1)}.container{width:100%}.container_mid{width:100%}.column,.column.right{float:none;padding:0 2rem 0 0;width:100%}.narrow .container{padding:0}.narrow .column{float:left;padding-top:1rem}.narrow .column.right{float:left;padding:1rem;text-align:center}.section.full .container{padding:3rem 2rem}.section.full p{max-width:100%}.section.header{min-height:450px}.section.header h1{font-size:3.9rem;margin:0 4.5rem}#signin{right:1rem}.section .nav.next,.section .nav.previous{font-size:6rem}.section.header .nav.next,.section.header .nav.previous{font-size:4.5rem;top:12rem}.section.header .nav.next{right:-2rem}.section.header .nav.previous{left:-2rem}.section.footer .nav.next{right:2rem;top:3.5rem}.section.footer .container{padding:3rem 0 4rem}.section.footer .advance_target{left:0;top:52%;width:100%}.section.footer .column.right{margin-top:4rem;padding-left:0;text-align:center}.section.footer .column.right p{margin-top:0;max-width:100%}.section.footer .nav.next{display:none}.section.footer .column.right p.title{margin:2rem auto 0}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:0}ul.dynamic{margin:0 0 2rem}.column.right ul.dynamic{margin-right:2rem}ul.dynamic li.active .arrow{display:none}.item_content{margin:0 auto}}@media only screen and (max-width: 767px){.hide_on_mobile{display:none}.section.full .container{padding:2.5rem 1.25rem}.section.header{min-height:420px}.section.header h1{background:none repeat scroll 0 center rgba(0, 0, 0, 0);border:0 none;box-shadow:none;font-size:3rem;line-height:3.25rem;margin:0;padding:0 0 0 1rem}#signin{right:1rem;top:1rem}.section.header .nav.next,.section.header .nav.previous{top:16.5rem}.section.header .nav.next{right:-1.5rem}.section.header .nav.previous{left:-1.5rem}#wherever-you-are .section.header h1,#universal-search .section.header h1{padding-top:1rem;text-align:left}.section.footer .advance_target{bottom:60%;top:0}.signed-in .section.footer .advance_target{bottom:0}.section.footer .column.right{margin-top:1rem;padding:0 1rem 4rem}.section.footer .column.right p.title{font-size:2.25rem;line-height:2.75rem}.section.footer h1{font-size:2.5rem;line-height:3rem;margin:0 0 1.5rem}.section.footer .container{padding:2rem 0 3rem}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem}.column.right{padding-bottom:1rem;padding-left:0}#universal_01{background-size:100% auto;height:300px;width:300px;margin:0 auto}#universal-context h3{margin-top:0.7rem;text-align:center}#sharepic{background-size:100% auto;background-image:url("/img/share-content.png");height:100px;margin:0 auto;width:240px}.signed-in #universal-search .section.footer h1{margin-bottom:3rem}}#su .header{left:0;position:absolute;top:0;width:100%}#su .section.splash .container{padding-top:1.5rem}#su #signin{color:white;font-size:0.8rem;font-weight:normal;line-height:1.25rem;margin:0;position:absolute;right:0;top:1rem}#su #signin_link{border:1px solid white;border-radius:0.25rem;color:white;font-size:1rem;font-weight:700;line-height:3rem;padding:0.5rem 1.25rem;text-decoration:none}#su #signin_link:hover{background:none repeat scroll 0 0 white;color:#555459 !important;text-decoration:none;text-shadow:none}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:-8px}#su .section.footer a{color:#2572a4;font-weight:700;margin:0 0.5rem}#su .section.footer a:hover{color:#1c1c2f}#su .section.footer h2{margin:0 auto 2rem;max-width:800px;text-align:center}#su .section.footer p{line-height:2rem;margin:2rem auto 0}#su .footer_logo_wrapper{text-align:center;margin-left:1.3%}#su .section.footer .section.landing.form{background:none repeat scroll 0 0 #3d4b5b;display:block;margin:0 auto}#su .section.splash{background-image:linear-gradient(rgba(8, 45, 90, 0.2), rgba(8, 45, 90, 0.1)), url("/img/landing_bg_2000x1415.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;min-height:672px;padding-bottom:2rem;text-align:center;text-shadow:0 1px 2px rgba(0, 0, 0, 0.5)}#su .section.splash h1{color:white;font-size:7rem;font-weight:700;margin:0;padding:10rem 0 4rem}#su .section.splash p{color:white;font-size:1.5rem;line-height:2.25rem}#su .section.video.splash{background-image:linear-gradient(rgba(8, 45, 90, 0.2), rgba(8, 45, 90, 0.1)), url("/img/landing_bg_2000x1415.jpg");min-height:0;padding-bottom:0}@media not all,only screen and (min--moz-device-pixel-ratio: 2),not all,not all,only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx){}h1 .logo-txt{font-family:"Lato",sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:10px;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 1)}h1 .icon-size{font-size:34px !important}.container .header h1{font-size:2.5rem;font-weight:900;letter-spacing:-1.5px;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 0.5)}.section.splash h1{color:white;font-size:7rem;font-weight:700;margin:0;padding:10rem 0 4rem}#su .section.video.splash h1{font-size:2.5rem;font-weight:900;letter-spacing:-1.5px;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 0.5)}#su .section.video.splash p{-moz-osx-font-smoothing:grayscale;font-size:1.3rem;line-height:1.5rem;text-shadow:0 1px 4px rgba(0, 0, 0, 0.5)}#su .section.video.splash #video_thumb{cursor:pointer;height:207px;margin:1rem auto 0;width:332px}#su input[type="text"],#su input[type="email"],#su input[type="submit"],#su textarea{background:none repeat scroll 0 0 white;border:0 none;border-radius:0.25rem;color:#555459;font-family:"Lato",sans-serif;font-size:1.1rem;font-weight:700;height:48px;margin:0.5rem 0.25rem;padding:0.75rem;vertical-align:bottom;width:300px}#su input[type="submit"]{background:none repeat scroll 0 0 #1c1c2f;color:white;cursor:pointer;font-weight:400;margin-left:0;padding:0.75rem 2rem !important;text-shadow:0 1px 2px rgba(0, 0, 0, 0.5);width:auto}#su input[type="submit"]:hover{background:none repeat scroll 0 0 #3da7f2}@media only screen and (min-width: 768px) and (max-width: 1024px){#su .container{width:100%}#su .container_mid{width:90%}#su #signin{right:1rem}#su .section.video.splash h1{padding-top:6rem}#su .section.video.splash #video_thumb{margin-top:0.5rem}#su .section.video.splash .container{padding-bottom:0}#su .footer_logo_wrapper{text-align:center;margin-left:11px}}@media only screen and (min-width: 768px) and (max-width: 1023px){h1 .logo-txt{font-family:"Lato",sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:-10px;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 1)}#su .container{margin-left:3.6%;width:90%}#su .container_mid{width:90%}#su .section.splash .container{padding-top:1.5rem;padding-left:0.2rem}#su #love h3{max-width:85%}#su #love p{font-size:1rem;margin-bottom:2rem}#su input#email,#su input#company{padding:0.75rem 0 0.75rem 1rem;width:226px}#su .section.footer .container{padding:3rem 0.5rem}#su .footer_logo_wrapper{text-align:center;margin-left:11px}#su .section.footer h2{font-size:2rem;line-height:2.5rem;margin:1.5rem auto;max-width:630px}#su .footer_logo_wrapper{text-align:center;margin-left:1.5%}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:0}#su .section.video.splash h1{font-size:3.5rem}#su .section.video.splash p:first-of-type{margin:1rem auto;max-width:500px}}@media only screen and (max-width: 767px){h1 .logo-txt{font-family:"Lato",sans-serif;font-size:2.5rem;font-weight:900;letter-spacing:-2px;margin-right:2.4%;padding-bottom:1rem;text-shadow:0 1px 10px rgba(0, 0, 0, 1)}#su .show_on_mobile{display:block}#su .hide_on_mobile{display:none}#su .container{width:90%}#su .container_mid{width:100%}#su #signin{right:1rem}#su .section.splash h1{font-size:4.8rem;line-height:5rem;padding:6rem 0 1rem}#su .section.splash p.tagline br{display:none}#su .section.splash p.tagline{color:white;font-size:1.5rem;font-weight:500;line-height:2rem;margin:1rem 0.25rem}#su .section.landing.form p{text-align:center}#su .section.footer .section.landing.form{width:100%}#su .section.video.splash{background-image:linear-gradient(rgba(8, 45, 90, 0.2), rgba(8, 45, 90, 0.1)), url("/img/landing_bg_2000x1415.jpg")}#su .section.video.splash #signin{right:1.5rem;top:2rem}#su .section.video.splash #signin_link{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;border-color:-moz-use-text-color -moz-use-text-color white;border-image:none;border-radius:0;border-style:none none solid;border-width:0 0 2px;font-weight:900;line-height:1rem;padding:0}#su .section.video.splash #signin_link:hover,#su .section.video.splash #signin_link:active{background:none repeat scroll 0 center rgba(0, 0, 0, 0);color:white !important;text-decoration:none}#su .section.video.splash h1{font-size:3rem;letter-spacing:-2px;line-height:3.25rem;margin-left:6px;padding-top:3.5rem;text-align:center;text-shadow:0 1px 5px rgba(0, 0, 0, 0.5)}#su .section.video.splash p{font-size:1rem;line-height:1rem;margin:0;text-shadow:0 1px 2px rgba(0, 0, 0, 0.5)}#su .section.video.splash #video_embed{background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5);border:2px solid white;border-radius:0.25rem;margin:1rem auto 1.5rem}#su .section.video.splash #video_form{padding:2rem 1.5rem}#su .section.video.splash #video_form p{color:white;line-height:1.5rem;margin:0 0 1rem !important}#su .section.video.splash #video_form p.subdued{color:rgba(255, 255, 255, 0.7);font-size:1rem;font-weight:normal;line-height:1.25rem;margin-top:1rem}#su .section.video.splash #form_overlay{background:none repeat scroll 0 0 rgba(68, 45, 87, 0.95);bottom:0;display:none;left:0;overflow-y:scroll;padding:3rem 1rem;position:fixed;right:0;top:0;z-index:100}#su .section.video.splash #form_overlay p{margin-top:2rem !important}#su .section.video.splash #form_overlay p.subdued{margin-top:1rem !important}#su .section.video.splash #form_overlay_cancel{border-bottom:2px solid white;color:white;font-size:1rem;font-weight:900;line-height:1rem;padding:0;position:absolute;right:1.5rem;text-decoration:none;top:2rem}#su h2{font-size:1.5rem;line-height:2rem}#su input[type="text"],#su input[type="email"],#su input[type="submit"],#su textarea{margin:0.5rem 0;padding:0.75rem 1.25rem;width:100% !important}#su .section.form p{font-size:1.25rem;line-height:1.75rem}#su .footer_logo_wrapper{text-align:center;margin-left:0.5%}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:4px}}@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape){#su .section.video.splash h1{font-size:2.5rem;margin-left:0}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:0}}@media only screen and (max-width: 479px){#su .show_on_mobile{display:block}#su .hide_on_mobile{display:none}#su .container{width:70%}#su .container_mid{width:70%}#su .section.splash{padding-bottom:1rem}#su .section.splash .container{padding:1.5rem 0.5rem 0}#su .section.splash h1{font-size:3.2rem;line-height:2.5rem;padding:8rem 0.5rem 2.5rem;text-align:left}#su .section.splash p.tagline{font-size:1.5rem;line-height:2rem;margin:0 0 2rem 0.5rem;text-align:left}#su .section.landing.form{padding:0.25rem 0.75rem}#su .section.landing.form p{font-size:1rem;padding:0 0.5rem}#su .section.video.splash h1{margin-left:-0.25rem}#su .section.footer .container{padding:3rem 0.75rem 2rem}#su .section.footer h2{font-size:1.3rem;line-height:1.8rem}#su .section.footer p{font-size:0.7rem;line-height:1.5rem}#su .section.footer{background:none repeat scroll 0 0 white;font-weight:300;font-size:1rem;margin-left:0}#su h2{font-size:1.5rem;line-height:2rem}}
+
+</style>
+
+<div class="section video splash">
+<div class="container">
+<div class="header"></div>		
+<h1><div class="icon-ccc_xxlarge"><span class="logo-txt">crowdcc</span></div></h1>
+<p class="video_tagline hide_on_mobile">manage your social content, read everything, at once in <em>one</em> place, store, read later.</p>
+<p class="video_tagline show_on_mobile">read everything, all at once</p>				
+</div>
+
+<div id="video_form">
+<p class="xsml_left_margin">crowdcc is free to use.</p>
+<input id="form_overlay_btn" class="signin-tweet show_on_mobile" type="submit" value="sign in with twitter" />
+<div id="form_overlay" class="show_on_mobile">
+<div id="logo"></div>
+<a id="form_overlay_cancel">Cancel</a>
+<div class="landing form section"><a name="signup"></a>
+
+<p class="show_on_mobile sml_left_margin">let us know what you think.</p>
+<input type="submit" class="signin-tweet" value="sign in with twitter" />	
+<p class="hide_on_mobile">let us know what you think.</p>
+
+</div>
+<p class="subdued">After you sign in, we'll send you an e-mail with a link to create your team.</p>
+</div>
+<div class="hide_on_mobile">
+<div class="landing form section"><a name="signup"></a>
+<p class="show_on_mobile">let us know what you think.</p>
+<input type="submit" class="signin-tweet" value="sign in with twitter" />	
+<p class="hide_on_mobile sml_left_margin">let us know what you think.</p>
+
+</div>
+</div>				
+</div>
+
+</div>
+			
+<div class="section cloud_white_bg" id="universal-context">
+<div class="container">
+<div class="column left">
+
+<h3>Share content or copy</h3>
+<p>for reading later, delete or keep for as long as you want, as soon as you sign in we give you 50cc (carbon copy) tweets you can copy and keep.  If you signup (signin to crowdcc) by registering your email address with us we give you an additional 50cc, that's 100cc copy storage, for reading later, read then delete or store for as long as you want, for free.</p>
+<p>Addtional storage is avaliable for a small monthly fee (to pay for storage and development costs) , please see below ... 
+</div>
+
+</div>
+<div class="column right">
+<div id="universal_01" class="retina"></div>
+<div class="clear-both"></div>
+</div>
+</div>
+
+<div class="section sky_blue_bg full colored colored patterned" id="universal-medium">
+<div class="container_mid">
+<h2 class="align-center bottom_margin top_margin">“... this is so easy to use, it looks good and feels right, no more scrolling up and down to find interesting content,</h2>
+<div id="sharepic"></div>
+<h2 class="align-center bottom_margin top_margin">it's all there, in my timeline and I can store it for as long as I want ...”</h2>
+<p class="align-center"><strong>Glyn Thomas</strong>, founder developer, <a href="http://medium.com" target="new" class="bold">crowdcc</a></p>
+</div>
+</div>
+
+<div class="section narrow hide_on_mobile" id="universal-files" style="background-color: white;">
+<div class="container">
+<div class="column left">
+
+<h3>Manage your content</h3>
+<p>your in control of what you want to keep and what you no longer want, if you need more copy space, register with us for another free 50cc (100cc free in total) and if you want a lot more space upgrade your account for a small monthly fee which pays for the storage space and allows us to fund future development.</p>
+</div>
+
+<div class="column right">
+<img src="/img/del-plus.png" />
+</div>
+</div>
+
+</div>
+<div class="clear-both"></div>
+
+<div id="header">
+<h1 style="text-align: center;">pricing guide <br><span style="font-size:15px;">per month</span></h1>
+</div>
+
+<div id="price0" style="padding: 1rem 1rem;">
+<h2 style="text-align: center;">$0 free lite<br> account</h2>
+<p style="margin-left:20px;margin-right:20px;text-align:center;">use all features without any restrictions, 50 tweet storage to start with, register and we give you an additional 100 tweet storage.</p>
+<div style="text-align: center; padding: 2rem 1.5rem;">
+<input type="submit" class="signin-tweet" value="sign in for free">
+</div>
+</div>
+	
+<div id="price6" style="padding: 1rem 1rem;">
+<h2 style="text-align: center;">$6 standard<br> account</h2>
+<p style="margin-left:20px;margin-right:20px;text-align:center;">the most popular user requested additional features will be availiable for this account, plus store up to 500 tweets.</p>
+<div style="text-align: center; padding: 2rem 1.5rem;">	
+<input type="submit" class="signin-feedback" value="your feedback">
+</div>
+</div>
+
+<div id="price12" style="padding: 1rem 1rem;">
+<h2 style="text-align: center;">$12 professional<br> account</h2>
+<p style="margin-left:20px;margin-right:20px;text-align:center;">we are very busy planning addtional features, only availiable for professional account users, plus store up to 1000 tweets</p>
+<div style="text-align: center; padding: 2rem 1.5rem;">
+<input type="submit" class="signin-feedback" value="your feedback">
+</div>
+</div>
+
+<div class="clear-both"></div>
+<div class="section footer" style="clear: both;">	
+<div class="container">
+<div class="footer_logo_wrapper">					
+<div class="icon-ccc_xxxlarge"></div>
+</div>
+		
+<h2 class="align-center">we love crowdcc<br> we want to build it, so you'll love it too.</h2>		
+<p class="align-center">made by unbios</p>
+
+<div id="blog_link"><a href="http://crowdcchq.com" target="_blank">our blog</a></div>
+
+<p class="footer_links align-center">
+<a href="help/contact">contact us</a>
+<a href="http://twitter.com/crowdccHQ" target="_blank">@crowdcchq</a>
+<a href="mailto:press@crowdcc.com">press</a>	
+
+<br />
+
+<a class="terms" href="terms/service" >terms</a>
+<a class="terms" href="terms/privacy" >privacy</a>
+<a class="terms" href="terms/cookies" >cookies</a>
+<a class="terms" href="terms/use" >use</a>
+
+</p>
+</div>
+</div>											
+<div id="video_overlay"></div>
+					
+</div>
+
+<!-- warning, do not touch anything below this line, thanks -->
+
+<script type="text/javascript" src="/js/ccc.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/datepkr.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/hacked.min.js?v=1.00.00"></script>
+<script type="text/javascript" src="/js/rsa_x.js?v=1.00.00"></script>
+
+</html>
