@@ -1,0 +1,130 @@
+
+/**
+*
+* @author    glyn thomas
+* @version   1.00.00
+* @copyright @crowdcc_ @glynthom
+* 
+* simpleflake.txt * details
+*
+*
+*/
+
+simpleflake.txt
+
+ref: http://web.archive.org/web/20150322222546/http://engineering.custommade.com/simpleflake-distributed-id-generation-for-the-lazy/
+ref: http://akmanalp.com/simpleflake_presentation/#/
+
+Written by Mali, Sawdust Software
+Simpleflake: Distributed ID generation for the lazy
+Published August 12, 2013
+
+Note from Jim: Simpleflake, our second open source release, does exactly what it’s called: provide a very simple way to generate unique IDs across distributed shards (or even multiple systems). It’s simplicity is great for us: a startup engineering team with no DBAs and a very, very busy DevOps engineer. Simpleflake’s ID generation requires ZERO coordination with server IPs or MAC addresses (good as we regularly instantiate new hosts in AWS) or–even worse–any coordination of code with database content. We hope you find Simpleflake useful and invite forking, pull requests and comments. We have now added hooks to Travis CI to allow you to test your use Simpleflake more easily.
+
+It’s a common theme that tasks which are very straightforward in non-distributed systems can sometimes be daunting in distributed ones. ID generation is one of those tasks.
+
+Let’s imagine for a second that you have an RDBMS filled with data. A very common way to deal with increasing data size and load (especially writes) is to shard the database. What this entails is that your data is spread across multiple computers. In the simplest case, you now have the same table / schema on two different computers.
+
+Now let’s imagine you want to insert a new row into a sharded table. Your old table probably looked like this:
+
+
+CREATE TABLE kittens (
+`id` BIGINT AUTO_INCREMENT,
+PRIMARY KEY(`id`)
+);
+
+Let’s say you had 55 things in the table. The id of the last thing would have been 55, and the next one to be entered would get id 56. But now that it’s sharded, you have two different AUTO_INCREMENT columns, and they’re both at 55. Now if you insert one to each, assuming you didn’t change anything, you’d get two items with id 56, one at each server. Uh oh!
+
+Unless you’re lucky enough to be using an auto-sharding database, it’s now up to you to coordinate ID generation. So, we need a distributed method.
+
+You could do a hackjob solution by changing the AUTO_INCREMENT starting values such that hopefully the range of one server won’t hit the other one. So you’d set server A to start at 0 and server B to start at 100000, and hopefully you won’t get 100000 things in server A or you’re going to have to deal with an expensive rekeying process. Also this quickly gets complicated for multiple servers, and is a pain to deal with.
+Coordinated solutions
+
+You don’t want a solution where you check each server one by one for the next AUTO_INCREMENT, since by the time you check all the servers, a server you’ve already checked could have gotten a new row that you don’t know about, and thus now your ID is wrong.
+
+Alternatively, you could get the same ID as a different process which is competing with you to insert a row, and now you have a collision. You could then have a lock / unlock system to ensure that there is only one process getting an ID at the same time, but now your rate of insertion is much lower since you can’t do two writes simultaneously. This defeats part of the reason you’d want to shard: increased write performance. So the second property we’re looking for is being an uncoordinated system.
+Flickr style
+
+So having the ID generation spread out is difficult and problematic. So what if we pulled it out? Like the unix philosophy says: Do one thing, and do it right! Turns out this has been attempted. Flickr uses a “ticket server” to handle key generation, where they do an arcane `REPLACE INTO Tickets64 (stub) VALUES (‘a’);` every time they need a new ID. To handle the single point of failure, they have two ticket DBs, one doing even and another doing odd IDs.
+
+They mention that the IDs drift out of sync over time and the values become imbalanced. Depending on what you’re doing, this might not matter. But if you’re like us and you need your IDs to be more or less ordered, then this doesn’t work out.
+
+In any case, if all you need is getting an ID, do I really need our sole ops person to deploy and manage two new databases just to have auto increment and locking?
+Separate service
+
+Twitter came up with a different solution for this problem: Snowflake. It’s basically a separate ID generator service where a 64-bit ID is generated for you, and sent back. You can run many nodes, and Snowflake nodes coordinate with each other at the beginning using Zookeeper, to set a worker id. But they don’t need to keep coordinating all the time.
+
+The simplicity of the ID is rather brilliant. It consists of a timestamp, concatenated with the worker id, concatenated with a sequence number. The timestamp at the beginning gives us the ordering characteristics that we wanted. The worker id in effect partitions the keyspace such that workers can’t collide with each other, and the sequence number ensures uniqueness within the same millisecond. Oh, and it fits in 64 bits!
+
+The problem with Snowflake is now you have to run a JVM instance, Zookeeper, maven, all the stuff that comes with that in a production setup. This is great if you already happen to run that stack, but a pain otherwise.
+Enter simpleflake
+
+Our library, simpleflake, follows a similar pattern to Snowflake in that it is prefixed with a millisecond timestamp, but the remaining bits are completely random. What this gives you over snowflake is that there is no configuration to set, no state to maintain across servers and reboots, no moving parts, and no network calls. Plus, it’s up on PyPI and dead simple to use.
+
+
+>>> from simpleflake import simpleflake, parse_simpleflake
+>>> simpleflake()
+3594162604452825250L
+>>> parse_simpleflake(3594162604452825250L)
+SimpleFlake(timestamp=1375160370.606, random_bits=6768802L)
+
+Easy! You can also manually set the timestamp or the random bits in the constructor.
+A crash course in collisions
+
+Of course, as with any completely random scheme, there is a chance of collision. Two events need to happen simultaneously to cause a collision: Two IDs get generated in the same millisecond (i.e. two writes), and the random component for those two IDs happen to be the same.
+
+The chance of the first is a distribution problem: Given an average rate of insertion of R requests/sec, what is the probability that at least two requests coincide on the same millisecond? Turns out, this process can be modeled reasonably accurately by the Poisson Distribution. For example, at a respectable 100 inserts/sec, the chances of at least 2 inserts happening on the same millisecond:
+
+PDF[PoissonDistribution[0.1], 2]
+= 0.00452419
+
+And then, for two inserts in the same millisecond, the chances that you’ll get a collision in random bit strings of length L (23 in our case) is closely related to the Birthday Problem (fascinating read, especially if you’re also into cryptography). Without going into too much detail, a decent approximation for that is:
+
+2^2 / (2 * 2^L)
+= 2.3842 × 10^-7
+
+Multiplying the two, we get:
+
+1.0787 x 10^-9
+
+Which is extremely low. To visualize, if I had 10^9 dollar bills, I could put them end to end to go around the world more than three times (thanks Wolfram Alpha!), and an accurate demonstration of the probability would be if I chose one of those dollar bills without telling you, and you managed to choose the exact same one.
+
+Another source of consolation for the overly wary is that if you *do* get a collision, since you have the exact same key, the key will go to the exact same shard as the other one, giving you a uniqueness error. When this extremely rare event happens, you just reinsert the same item with a freshly generated key. Ta da!
+
+Besides, if you really are doing a sustained 100 inserts per second, even assuming you’re storing something small, like a tweet, you’d be generating upwards of 2.5GB/day (assuming around 300 bytes with text + metadata). In which case, it’s worth the cost for you to switch to Snowflake (or maybe even hire a DBA), in which case, if you’re already using simpleflake, you can do seamlessly, without data migrations!
+
+One gotcha here is that since this is partially timestamp based, if you have reasonably high rate of writes it’s a good idea for you need to use NTPd or somesuch to keep your computer clocks in sync. This is not a huge deal, most modern distros come with NTPd already. You can force ntpdate to slew the time instead of making it erratically jump by setting the “-B” parameter.
+So why is <insert large company> not using this, then?
+
+For example, Twitter has much more write load than your average startup (or really, almost anyone). At 12GB/day just for tweet text and 800 tweets/sec, they would likely oversaturate the wide safety margin that simpleflake has, causing a lot more collisions.
+
+Conversely, using something like Snowflake for anything much smaller is probably a waste of ops resources and CPU cycles.
+UUID Hell
+
+A common question I get is: why not just use a UUID? First, they’re huge. 128 bits overhead per item is not terrible, but it adds up fast sometimes. For example, indexes in a lot of DBs refer to the primary key, so if you have a long primary key and 6 indices, you’re taking that penalty 6 times.
+
+Also, in the standard 16K page size, if you use a 128 bit ID, you can fit much less data. Now you need to do more disk reads to fetch the same number of rows.
+
+Finally, there is also a matter of data locality. Random UUIDs are, well, random, so your data is scattered all across the btree (which is arguably the most common method of storage). If your access pattern is completely random, you probably won’t see a performance loss but usually this is not the case. For example. when you’re grabbing the freshest 100 rows for a user, having all required data in a few contiguous pages does wonders for reads. Even UUID1, which has a timestamp component in it, stores the timestamp semi-backwards, which messes up this neat property. If your database is fancy enough you can cluster by something other than the primary key, but even then in most cases you’re now looking at a separate auto increment id and more wasted space.
+There are alternatives
+
+There are a few other ways of solving this problem that have varying degrees of utility.
+
+Range based systems work well for some but usually require coordinating between the clients. One such system is the HiLo method used by Hibernate, which smartly cuts down on coordination but has SPOF issues since it has a “special” server that coordinates the high range.
+
+Another method is adding a hash of the IP / MAC address into the ID. This ensures that IDs that are generated on separate boxes don’t collide, but doesn’t cover the use case of multiple processes on the same computer. You could remedy this by also adding a process ID. Then, there is the problem of making sure two ids in the same millisecond don’t match, which you could use a sequence number for.
+
+Even then, I think it’s tough to balance the size requirement with all this. With 23 bits left over from the timestamp, it’s hard to fit MAC/IP address, process id and sequence number. You can use a chopped hash or the last few digits of the IP/MAC, but I’m not convinced that the “security” this buys you would then be better than a purely random number. Snowflake manages to do this only because their machine IDs are precoordinated and thus don’t have to be long.
+Epilogue
+
+For our use case (lots of data, mild to medium insert rate, small number of engineers / ops), which I suspect aligns with a lot of others, simpleflake seems to fit well.
+
+It’s easy to use and didn’t take long to code up
+There is no state / config to maintain, which means we can bring servers up and down without worrying that it’s using the same machine id or such
+It doesn’t have many moving parts, no additional infrastructure and no network connection goes a long way in keeping complexity down for a small shop
+Has almost all the benefits of snowflake in being uncoordinated, distributed, k-ordered
+Yet it still is forward thinking in that when we outgrow this, we can move to snowflake by changing a function in our code and flipping a switch
+
+In short, it about finding the right fit for your stack and use case. If you think this is useful, get it on PyPI or fork it on github!
+Presenting this at Boston Python
+
