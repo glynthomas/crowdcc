@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>crowdcc</title>
+<meta name="description" content="manage your social content, read everything, at once in one place, store, read later.">
+<meta name="author" content="crowdcc">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+<link id="favicon" rel="shortcut icon" href="/img/icons/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png" />
+<link rel="icon" href="/img/icons/app-256.png" sizes="256x256" type="image/png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/icons/ios-152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/icons/ios-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/icons/ios-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/ios-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/ios-72.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/icons/ios-57.png" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/img/icons/app-144.png" >
+
+<link href="/css/plantical.css" rel="stylesheet" type="text/css" />
+<link href="/css/fonticon.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<div id="topbar" class="topbar">
+
+<div id="banners" class="js-banners"> </div>  
+<div class="global-nav">
+<div class="container">
+    
+<div class="ccc-spinner"></div>
+<div role="navigation" style="display: inline-block">
+<ul id="global-actions" class="nav js-global-actions">
+<li id="global-nav-home" class="home active" data-global-action="home">
+
+<div id="sign" style="display:block;">
+<div class="signon account" data-global-action="account" style="display: block;">
+<span class="signon icon icon-user icon--large icon-nib-right"></span>
+<div id="top-loader" style="display: none;">
+<!-- <img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" /> -->
+</div>
+
+<span id="signon" class="signon textin">sign in</span>
+
+</div>
+<div id="sigfrm" class="sigfrm" style="height:104px; display:none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+<div id="accaller" style="display:none;">
+<nav>
+<ul>
+<li id="tt-acc-usr" data-name="tt-acc-usr"> 
+<a class="signin-tweet account-summary"> 
+<div class="signin-tweet account-group js-mini-current-user">
+<div class="signin-tweet fromuser_table clearfix">
+<div class="signin-tweet fromuser_table_row">
+<div class="signin-tweet image">
+<div class="signin-tweet avatar-menu size32 icon-twitter_med icon--menu"></div>
+</div>
+<div class="signin-tweet withtt">with twitter</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="cc-acc-usr" data-name="cc-acc-usr"> 
+<a class="signin-menu account-summary"> 
+<div class="signin-menu account-group js-mini-current-user">
+<div class="signin-menu fromuser_table clearfix">
+<div class="signin-menu fromuser_table_row">
+<div class="signin-menu image">
+<div class="signin-menu size32 icon-ccc_xlarge icon--menu"></div>
+</div>
+<div class="signin-menu withcc">with crowdcc</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li>
+<div id="signin-content" class="signin-content" style="display:none;">
+<div class="ecode_row">
+<input id="email" class="email" type="text" placeholder="email or username" value="" autocomplete="on" value="" name="email" />
+</div>
+<div id="ecode_msg">&nbsp;</div>
+<div class="pcode_row">
+<input id="passcode" class="passcode" type="password" placeholder="password" autocomplete="off" name="passcode" />
+</div>
+<div id="pcode_msg">&nbsp;</div>
+<div class="radio_row_1">
+<input id="signin_radio_1" class="signin_radio" name="signin_radio" type="radio" value="new_usr" autocomplete="off"/>
+<label for="signin_radio_1" class="sign_radio" style="cursor: pointer;">i am new to crowdcc</label>
+</div>
+<div class="radio_row_2">
+<input id="signin_radio_2" class="signin_radio" name="signin_radio" type="radio" value="cur_usr" checked="checked" autocomplete="off"/>
+<label for="signin_radio_2" class="sign_radio" style="cursor: pointer;">yes i have a password</label>
+</div>                
+<div class="submit-actions">                  
+<input class="signin-crowdcc-btn sign-btn btn" name="signin_button" type="submit" value="sign in" >                  
+</div> 
+</div>
+</li> 
+</ul>
+</nav>
+</div>
+</div>
+</div> 
+
+<div id="acc" style="display:none;">
+<div id="loading" style="display: none;"><img src="img/spinner-grey-40-20x20.gif" width="20" height="20" alt="...loader" /></div>
+<div class="me account" data-global-action="account" style="display: block;">
+<span class="me icon icon-user icon--large icon-nib-right"></span>
+<span id="me" class="me textin">me</span>
+</div>
+<div id="accfrm" style="display: none;">
+<span class="caret-outer"></span>
+<span class="caret-inner"></span>
+
+<div id="account" style="display:none;">
+<nav>
+<ul>
+<li id="acc-usr" data-name="acc-usr"> 
+<a class="account-summary"> 
+<div class="account-group js-mini-current-user" data-screen-name="default" data-user-id="">
+<div class="fromuser_table clearfix">
+
+<div id="fromuser_id" class="fromuser_table_row">
+<div class="image">
+<img class="avatar-menu size32" src="/img/default_profile_4_normal.png">
+</div>
+<div class="fromuser">default</div>
+<div class="fromuser_table_row">
+<div class="fromuser_profile">@default</div>
+</div>
+</div>
+
+</div>
+</div>
+</a>
+</li>
+<li id="divide-one" class="dropdown-divider" style="display:block;"></li>
+<li id="space-left" data-name="space-left">
+<a id="account-space" class="account-space" data-nav="account-space">space : 10cc</a>
+</li>
+<li id="acc-status">
+<a id="account-signup" class="signup-ccc" data-nav="upgrade-account" style="display:none;">signup to crowdcc</a>
+<a id="account-upgrade" data-nav="upgrade-account" style="display:none;">upgrade</a>
+</li>
+<li id="divide-two" class="dropdown-divider" style="display:none;"></li>
+<li id="acc-settings">
+<a id="account-settings" class="js-keyboard-shortcut-trigger" data-nav="shortcuts" style="display:none;">settings</a>
+</li>
+<li id="divide-three" class="dropdown-divider"></li>
+<li id="acc-help">
+<a id="account-help" class="js-nav" data-nav="account-help">help</a>
+</li>
+<li id="signout-btn">
+<a id="account-signout" class="signout-button" data-nav="signout" >sign out</a>
+</li>
+</ul>
+</nav>
+<div>
+</div>
+</div>
+</div> 
+
+</li>
+</ul>
+</div>
+
+<div class="ccc-icon-topbar">
+<div style="margin-right:auto; margin-left:auto; display:table; cursor:pointer;">
+<div style="display: table-row;">
+  
+<div id="ccc-top" class="ccc-top icon-ccc_large icon" style="display: table-cell; color: #1B3662"></div>
+     
+</div>
+</div>
+</div>
+
+<div class="pull-right" style="display: inline-block;">
+<ul id="global-actions" class="nav js-global-actions">
+<li class="create" data-global-action="create">
+<span class="create icon icon-quill icon--large icon-nibble-right"></span>
+<span class="create text">create</span>
+</li>
+<li id="global-nav-home" class="home active" data-global-action="home">
+</li>
+<li class="ccstore" data-global-action="ccstore">
+<span class="more more-cc more-rt">
+
+<span alt="timeline">
+<span class="instore icon icon-left icon-play_left icon--large"></span>
+</span>
+<span alt="carbon">
+<span class="ccstore icon icon-right icon-play_right icon--large"></span>
+</span>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="ui-dialog-position">
+<div class="ui-dialog ui-dialog-center" tabindex="-1" role="dialog" aria-describedby="modal-email" aria-labelledby="ui-id-1">
+
+<div class="ui-dialog-titlebar">
+<span id="ui-id-1" class="ui-dialog-title"> </span>
+<button class="ui-dialog-titlebar-close ui-button" role="button" aria-disabled="false" title="close">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="notices notices-center" style="position: fixed; margin-top: 6px; z-index: 101; display:block">
+<ul class="notices clearfix">
+<li class="alert error_icc actionable" style="background-color: rgb(68, 136, 246); border-bottom-color: rgb(68, 136, 246); display:block;">
+<span>
+<span class="message">Woaw, that page doesn’t exist, please refresh or close this window.</span>
+</span>
+</li>
+</ul>
+
+<div class="noticebar-close-float">
+<button class="ui-dialog-noticebar-close" title="close" aria-disabled="false" role="button" style="background-color: rgb(68, 136, 246); display:block;">
+<span class="ui-button-icon-primary"></span>
+<span class="ui-button-text">×</span>
+</button>
+</div>
+
+</div>
+
+<div class="ccmid">
+<!-- <object width="100%" height="100%" type="image/svg+xml" class="ccsvg" data="img/svg/ccc_logo_blk_32x32.svg"> </object> -->
+
+<svg version="1.1" id="ccsvg" class="ccsvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="32px" height="16.974px" viewBox="0 0 32 16.974" enable-background="new 0 0 32 16.974" xml:space="preserve">
+<path d="M20.922,3.446c0.029-0.028,0.061-0.048,0.09-0.062c0.031-0.013,0.062-0.02,0.09-0.02c0.029,0,0.058,0.006,0.08,0.02
+  c0.025,0.013,0.051,0.033,0.078,0.062l1.04,1.482l1.04,1.482c0.057,0.056,0.07,0.14,0.057,0.217
+  c-0.013,0.077-0.057,0.147-0.111,0.175l-1.971,1.147l-1.971,1.146c-0.056,0.027-0.121,0.074-0.168,0.125
+  c-0.047,0.054-0.07,0.111-0.047,0.16c0.018,0.031,0.047,0.082,0.085,0.142c0.039,0.059,0.085,0.125,0.13,0.188l1.406,1.986
+  l1.404,1.984c0,0.029,0.016,0.057,0.027,0.084c0.017,0.029,0.028,0.057,0.028,0.084c0,0.057-0.017,0.113-0.043,0.162
+  s-0.069,0.09-0.127,0.117l-1.49,0.895l-1.487,0.896c-0.027,0.025-0.068,0.043-0.111,0.049c-0.042,0.008-0.084,0.008-0.113,0.008
+  c-0.055,0-0.098-0.014-0.133-0.035c-0.035-0.021-0.062-0.049-0.094-0.076l-1.182-2.209l-1.181-2.209
+  c-0.028-0.055-0.061-0.092-0.093-0.112c-0.032-0.022-0.064-0.029-0.092-0.024c-0.054,0.01-0.092,0.045-0.117,0.077
+  c-0.025,0.031-0.036,0.062-0.036,0.062l-1.209,2.209l-1.209,2.209c-0.056,0.057-0.126,0.1-0.196,0.113
+  c-0.07,0.014-0.141,0-0.198-0.056L11.583,15l-1.517-0.927c-0.056-0.026-0.112-0.084-0.141-0.146
+  c-0.029-0.062-0.028-0.133,0.028-0.188l1.462-2.012l1.462-2.013c0.028-0.056,0.07-0.11,0.105-0.168s0.063-0.11,0.063-0.168
+  c0-0.028-0.028-0.069-0.077-0.121c-0.049-0.049-0.12-0.104-0.204-0.157l-1.938-1.12L8.89,6.861C8.834,6.834,8.789,6.78,8.762,6.722
+  c-0.027-0.058-0.035-0.12-0.02-0.167c0.01-0.029,0.019-0.05,0.032-0.079c0.013-0.028,0.031-0.063,0.059-0.119l1.012-1.426
+  l1.012-1.426c0.028-0.056,0.07-0.098,0.126-0.119s0.126-0.021,0.21,0.007l1.329,1.104l1.329,1.104
+  c0.031,0.023,0.07,0.059,0.107,0.088c0.038,0.029,0.075,0.052,0.103,0.052c0.056,0,0.082-0.031,0.093-0.08
+  c0.011-0.048,0.007-0.115,0.004-0.184l-0.112-2.405l-0.112-2.405c0.008-0.092,0.04-0.18,0.091-0.245
+  c0.051-0.064,0.121-0.106,0.206-0.106h1.828h1.828c0.084,0,0.154,0.028,0.203,0.077c0.049,0.049,0.076,0.119,0.076,0.202
+  l-0.104,2.386l-0.104,2.385c-0.008,0.156-0.008,0.242,0.006,0.292c0.017,0.05,0.041,0.066,0.091,0.081
+  c0.024,0.009,0.067-0.019,0.116-0.056c0.052-0.037,0.104-0.083,0.16-0.111l1.294-1.064L20.922,3.446z"/>
+
+  <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" repeatCount="1" />
+
+</svg>
+
+</div>
+
+<div id="pin"></div>
+
+<div id="ccc" style="display: none;"></div>
+
+<style>
+
+ body {
+  /* Location of the image */
+  background-image: url(/img/landing_bg_2000x1415.jpg);
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+ }
+
+ /* disable all controls */
+ .icon-play_left:hover { color:#DFDFDF !important; }
+ .icon-play_right:hover { color:#DFDFDF !important; }
+ .icon-play_left { color:#DFDFDF !important; }
+ .icon-play_right { color:#DFDFDF !important; }
+
+ .create:hover { color:#DFDFDF !important; }
+ .create { color:#DFDFDF !important; }
+
+ .signon:hover { color:#DFDFDF !important; }
+ .signon { color:#DFDFDF !important; }
+ .notices { margin-left: 0px !important; }
+
+ svg { width: 100%; height: auto;}
+ 
+ @media only screen and (min-width: 320px) and (max-width: 644px) {.ccsvg {margin-top: 160px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 645px) and (max-width: 650px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 651px) and (max-width: 659px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 660px) and (max-width: 690px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 691px) and (max-width: 700px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 701px) and (max-width: 720px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 721px) and (max-width: 750px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -70px}}
+ @media only screen and (min-width: 751px) and (max-width: 970px) {.ccsvg {margin-top: 110px} .noticebar-close-float{margin-top: -43px}}
+ @media only screen and (min-width: 971px) and (max-width: 1300px) {.ccsvg {margin-top: 80px} .noticebar-close-float{margin-top: -43px}}
+ @media only screen and (min-width: 1300px) and (max-width: 1600px) {.ccsvg {margin-top: 80px} .noticebar-close-float{margin-top: -43px}}
+ @media only screen and (min-width: 1630px) and (max-width:1950px) {.ccsvg {margin-top: 80px} .noticebar-close-float{margin-top: -43px}}
+ @media only screen and (min-width: 1951px) and (max-width: 2270px) {.ccsvg {margin-top: 80px} .noticebar-close-float{margin-top: -43px}}
+ @media only screen and (min-width: 2271px) {.ccsvg {margin-top: 80px}}
+
+</style>
+
+<script type="text/javascript" src="/js/ccc.js"></script>
+<script type="text/javascript" src="/error_html/js/error.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function(){
+      
+var uriarr = window.location.href.split('/');
+  
+/* console.log(uriarr[0] + '/'+ uriarr[1] +'/'+ uriarr[2] +'/'+ uriarr[3]); */
+
+var backlen = -1; 
+    history.go(-backlen);
+  
+    window.history.replaceState( '', 'crowdcc', uriarr[0] + '/'+ uriarr[1] +'/'+ uriarr[2] );
+
+  if (document.cookie.indexOf("__icc=true") === -1) {
+      /* set the onunload function */
+      window.onunload = function(){ document.cookie ="__icc=true;path=/;expires=Thu, 01-Jan-1970 00:00:01 GMT"; };
+  } else {
+      /* notify the user */
+      set_css_class('notices', 'backgroundColor', '#4488F6');
+      set_css_class('notices', 'borderBottomColor', '#4488F6');
+      set_css_class('notices', 'display', 'block');
+      set_css_class('alert', 'display', 'block');
+  }
+
+  uriarr = null; backlen = null;
+
+};
+
+function escapehtml(unsafe) {
+    return unsafe
+    .replace(/&/g,'')
+    .replace(/%3C/g, '')
+    .replace(/.*=/g,'')
+    .replace(/\?/g,'')
+    .replace(/%3E/g, '')
+    .replace(/"/g, '')
+    .replace(/'/g, '');
+}
+
+</script>
+
+</html>
