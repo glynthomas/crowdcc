@@ -1,0 +1,9 @@
+mysql : sec_user : eKcGZr59zAa2BEWU : crowdcc_sessions
+
+file * db updates :
+
+* crowdcc_sessions db SELECT, INSERT, UPDATE, DELETE access only
+
+* secure_session.php 
+
+01 : new : ccsessn : r0ll1ngSt0nEl1veSess10n  old : sec_user : eKcGZr59zAa2BEWU : crowdcc_sessions
